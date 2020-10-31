@@ -4,6 +4,7 @@
  + An: Backend.
  + Đạt: Backend Model + Database.
  + Nhung: Frontend.
+ 
 -Mô tả bài toán:
   *Trang web cung cấp các câu hỏi trắc nghiệm.
    + Người dùng sẽ trả lời các câu hỏi, đếm xem người dùng trả lời hết trong thời gian bao nhiêu.
