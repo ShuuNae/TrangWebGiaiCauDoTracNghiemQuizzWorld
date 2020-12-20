@@ -1,0 +1,15 @@
+<!-- navbar-->
+<app-header></app-header>
+<div class="d-flex align-items-stretch">
+  <div id="sidebar" class="sidebar py-3">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="page-holder w-100 d-flex flex-wrap">
+    <div class="container-fluid px-xl-5">
+      <router-outlet></router-outlet>
+    </div>
+    <footer class="footer bg-white shadow align-self-end py-3 px-xl-5 w-100">
+      <app-footer></app-footer>
+    </footer>
+  </div>
+</div>
