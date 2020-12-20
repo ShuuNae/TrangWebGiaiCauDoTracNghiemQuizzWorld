@@ -1,27 +1,20 @@
-# QuizzWorld
+# TrangWebGiaiCauDoTracNghiemQuizzWrold
+Đồ án môn học lập trình mã nguồn mở . Sử dụng ngôn ngữ lập trình PHP. Nhóm An, Đạt, Nhung.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+-Phân công nhiệm vụ:
+ + An: Controller.
+ + Đạt: Model + Database.
+ + Nhung: Frontend.
+ 
+-Mô tả bài toán:
 
-## Development server
+  *Trang web cung cấp các câu hỏi trắc nghiệm.
+   + Người dùng sẽ trả lời các câu hỏi, đếm xem người dùng trả lời hết trong thời gian bao nhiêu.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  *Hệ thống website sẽ được phân ra làm 2 nhóm sử dụng chính:
+   + Nhóm thứ nhất là người sử dụng : nhóm này là những người dùng thông thường, các chức năng mà nhóm này có quyền: thứ nhất chức năng chính của web là trả lời câu đố, ngoài ra nhóm này còn được xem kết quả mà mình đã thi và kết quả mà các người dùng khác đã làm .
+   + Nhóm thứ hai là người quản trị: nhóm này có quyền cao nhất hệ thống, có tất cả các quyền,có quyền tạo đề thi, thêm thành viên, tạo chuyên mục…
+    *Hệ thống website tạo bảng xếp hạng với các người dùng trả lời nhiều câu hỏi và nhanh nhất.  
+  *Người dùng phải tạo tài khoản để có thể tham gia trả lời.
+   
+ 
