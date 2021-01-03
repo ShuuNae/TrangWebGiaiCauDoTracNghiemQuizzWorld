@@ -9,7 +9,7 @@
 -Mô tả bài toán:
 
   *Trang web cung cấp các câu hỏi trắc nghiệm.
-   + Người dùng sẽ trả lời các câu hỏi, đếm xem người dùng trả lời hết trong thời gian bao nhiêu.
+   + Người dùng sẽ trả lời các câu hỏi, sau khi nộp bài, đưa ra kết quả cho người dùng.
 
   *Hệ thống website sẽ được phân ra làm 2 nhóm sử dụng chính:
    + Nhóm thứ nhất là người sử dụng : nhóm này là những người dùng thông thường, các chức năng mà nhóm này có quyền: thứ nhất chức năng chính của web là trả lời câu đố, ngoài ra nhóm này còn được xem kết quả mà mình đã thi và kết quả mà các người dùng khác đã làm .
