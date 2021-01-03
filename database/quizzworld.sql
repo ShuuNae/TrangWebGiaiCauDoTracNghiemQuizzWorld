@@ -7,20 +7,19 @@ create table Phan(
 );
 create table CauHoi
 (
-	MaCauHoi varchar(3) not null primary key,
-	NDCauHoi nvarchar(1000) not null,
-	MaPhan	smallint not null references Phan(MaPhan),
-	Hinh varchar(100) null
+	MaCH varchar(3) not null primary key,
+	NDCH nvarchar(1000) not null,
+	MaPhan	smallint not null references Phan(MaPhan)
 );
 
 create table DapAn
 (
-	MaCauTraLoi int not null,
-	NDCauTraLoi nvarchar(300) not null,
-	MaCauHoi varchar(3) not null,
+	MaDA int not null,
+	NDDA nvarchar(300) not null,
+	MaCH varchar(3) not null,
 	DungSai bit not null,
-	primary key(MaCauTraLoi,NDCauTraLoi),
-	foreign key (MaCauHoi) references CauHoi(MaCauHoi)
+	primary key(MaDA,NDDA),
+	foreign key (MaCH) references CauHoi(MaCH)
 );
 
 create table TaiKhoan
@@ -33,10 +32,10 @@ create table TaiKhoan
 create table ThiSinh
 (
 	MaThiSinh varchar(10) not null primary key,
-	HoTenThiSinh nvarchar(50) not null,
+	HoTen nvarchar(50) not null,
 	NgaySinh date not null,
 	GioiTinh char(1) default 'M',
-	DiaChi nvarchar(50),
+    Email varchar(100) not null,
 	Username varchar(20) not null,
 	foreign key (Username) references TaiKhoan(Username)
 );
@@ -45,7 +44,7 @@ create table KetQua
 (
 	STT int primary key AUTO_INCREMENT,
 	MaThiSinh varchar(10) not null,
-	ThoiGian datetime not null,
+	ThoiGian datetime null,
 	LanThi int not null,
 	KetQua varchar(5) not null,
 	foreign key (MaThiSinh) references ThiSinh(MaThiSinh)
@@ -126,23 +125,23 @@ end
 DELIMITER ;
 
 create procedure prc_ThemCauHoi
-	@macauhoi varchar(3),
+	@MaCH varchar(3),
 	@ndcauhoi nvarchar(500),
 	@maphan smallint,
 	@hinh varchar(20)
 as
 begin
-	insert into CauHoi values(@macauhoi,@ndcauhoi,@maphan,@hinh)
+	insert into CauHoi values(@MaCH,@ndcauhoi,@maphan,@hinh)
 end
 DELIMITER ;
 
 create procedure prc_ThemDapAn
-	@macautraloi int,
-	@ndcautraloi nvarchar(300),
-	@macauhoi varchar(3),
+	@MaDA int,
+	@NDDA nvarchar(300),
+	@MaCH varchar(3),
 	@dungsai bit
 as
 begin
-	insert into DapAn values(@macautraloi,@ndcautraloi,@macauhoi,@dungsai)
+	insert into DapAn values(@MaDA,@NDDA,@MaCH,@dungsai)
 end
 DELIMITER ;
