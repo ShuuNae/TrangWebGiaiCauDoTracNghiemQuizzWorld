@@ -24,10 +24,10 @@ class Nguoidung
        $sql = "SELECT * FROM Nguoidung Where tentaikhoan='$username' and matkhau='$password'";
        $query=  $this->conn->query($sql);
        if ($query->num_rows > 0){
-          return true;
+          return "Đăng nhập thành công";
        }
        else{
-          return false;
+          return "Đăng nhập thất bại";
        }
     }
 
