@@ -31,6 +31,17 @@ class Nguoidung
        }
     }
 
+    public function register($username, $password)
+    {
+       $sql = "INSERT INTO Nguoidung values('$username', '$password')";
+       $query = $this->con->query($sql);
+       if($result){
+         return 'Đăng ký thành công';     
+       }else{
+          return 'Kiểm tra thông tin để nhập vào, lỗi';     
+       }
+    }
+
    
     function __destruct() {
     mysqli_close($this->conn);  
