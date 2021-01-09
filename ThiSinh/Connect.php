@@ -2,7 +2,7 @@
 class thisinh
 {
     private $conn;
-    function __construct() //thissinh()
+    function __construct() //thisinh()
     {
       session_start();
       $servername = "localhost";
@@ -27,64 +27,69 @@ class thisinh
        
        $search='';
        if($search_input!=''){
-         $search="WHERE ( hovaten LIKE '%$search_input%' OR email like '%$search_input%' OR diachi like '%$search_input%' OR gioitinh like '$search_input%' OR Quocgia like '%$search_input%' )";  
+         $search="WHERE ( HoTen LIKE '%$search_input%' OR Email like '%$search_input%' OR NgaySinh like '%$search_input%' OR GioiTinh like '$search_input%' OR Username like '%$search_input%' )";  
        }
       
      
-       $sql = "SELECT * FROM thissinhs $search ORDER BY SV_id desc LIMIT $page,$perpage";
+       $sql = "SELECT * FROM ThiSinh $search ORDER BY MaTS desc LIMIT $page,$perpage";
      
        $query=  $this->conn->query($sql);
-       $thissinh=array();
+       $thisinh=array();
        if ($query->num_rows > 0) {
        while ($row = $query->fetch_assoc()) {
-          $thissinh['thissinh_data'][]= $row;
+          $thisinh['thisinh_data'][]= $row;
        }
        }       
        
-    $count_sql = "SELECT COUNT(*) FROM thissinhs $search";
+    $count_sql = "SELECT COUNT(*) FROM ThiSinh $search";
     $query=  $this->conn->query($count_sql);
     $total = mysqli_fetch_row($query);
-    $thissinh['total'][]= $total;       
+    $thisinh['total'][]= $total;       
        
-    return $thissinh;  
+    return $thisinh;  
     }
     
-    public function Tao_thongtin_thissinh($post_data=array()){
+    public function Tao_thongtin_thisinh($post_data=array()){
          
     
-       $hovaten='';
-       if(isset($post_data->hovaten)){
-       $hovaten= mysqli_real_escape_string($this->conn,trim($post_data->hovaten));
+      $MaTS='';
+      if(isset($post_data->MaTS)){
+      $MaTS= mysqli_real_escape_string($this->conn,trim($post_data->MaTS));
+      }
+
+       $HoTen='';
+       if(isset($post_data->HoTen)){
+       $HoTen= mysqli_real_escape_string($this->conn,trim($post_data->HoTen));
        }
-       $email='';
-       if(isset($post_data->email)){
-       $email= mysqli_real_escape_string($this->conn,trim($post_data->email));
+
+       $NgaySinh='';
+       if(isset($post_data->NgaySinh)){
+       $NgaySinh= mysqli_real_escape_string($this->conn,trim($post_data->NgaySinh));
        }
-       
-        $gioitinh='';
-       if(isset($post_data->gioitinh)){
-       $gioitinh= mysqli_real_escape_string($this->conn,trim($post_data->gioitinh));
+
+       $GioiTinh='';
+       if(isset($post_data->GioiTinh)){
+       $GioiTinh= mysqli_real_escape_string($this->conn,trim($post_data->GioiTinh));
        }
-       
-       
-       $diachi='';
-       if(isset($post_data->diachi)){
-       $diachi= mysqli_real_escape_string($this->conn,trim($post_data->Diachi));
+
+       $Email='';
+       if(isset($post_data->Email)){
+       $Email= mysqli_real_escape_string($this->conn,trim($post_data->Email));
        }
-       
-       $Quocgia='';
-       if(isset($post_data->Quocgia)){
-       $Quocgia= mysqli_real_escape_string($this->conn,trim($post_data->Quocgia));
+         
+       $Username='';
+       if(isset($post_data->Username)){
+       $Username= mysqli_real_escape_string($this->conn,trim($post_data->Username));
        }
        
       
      
-       $sql="INSERT INTO thissinhs(hovaten, email, Diachi,Quocgia,gioitinh) VALUES ('$hovaten', '$email', '$diachi','$Quocgia','$gioitinh')";
+       $sql="INSERT INTO ThiSinh(MaTS,HoTen,NgaySinh, GioiTinh,Email, Username) VALUES ('$MaTS','$HoTen', '$NgaySinh','$GioiTinh','$Email', '$Username')";
         
         $result=  $this->conn->query($sql);
         
         if($result){
-          return 'Đã thêm được 1 sinh viên';     
+          return 'Đã thêm được 1 thí sinh';     
         }else{
            return 'Kiểm tra thông tin để nhập vào, lỗi';     
         }
@@ -95,11 +100,11 @@ class thisinh
         
     }
     
-    public function view_thissinh_id($id){
+    public function view_thisinh_id($id){
        if(isset($id)){
-       $SV_id1= mysqli_real_escape_string($this->conn,trim($id));
-       //echo $SV_id1;
-       $sql="Select * from thissinhs where SV_id=$SV_id1";
+       $MaTS1= mysqli_real_escape_string($this->conn,trim($id));
+       //echo $MaTS1;
+       $sql="Select * from ThiSinh where MaTS=$MaTS1";
         
        $result=  $this->conn->query($sql);
      
@@ -109,41 +114,42 @@ class thisinh
     }
     
     
-    public function update_thongtin_thissinh($post_data=array()){
-       if( isset($post_data->SV_id)){
-       $SV_id=mysqli_real_escape_string($this->conn,trim($post_data->SV_id));
+    public function update_thongtin_thisinh($post_data=array()){
+       if( isset($post_data->MaTS)){
+       $MaTS=mysqli_real_escape_string($this->conn,trim($post_data->MaTS));
            
-       $hovaten='';
-       if(isset($post_data->hovaten)){
-       $hovaten= mysqli_real_escape_string($this->conn,trim($post_data->hovaten));
+       $HoTen='';
+       if(isset($post_data->HoTen)){
+       $HoTen= mysqli_real_escape_string($this->conn,trim($post_data->HoTen));
        }
-       $email='';
-       if(isset($post_data->email)){
-       $email= mysqli_real_escape_string($this->conn,trim($post_data->email));
+
+       $NgaySinh='';
+       if(isset($post_data->NgaySinh)){
+       $NgaySinh= mysqli_real_escape_string($this->conn,trim($post_data->NgaySinh));
        }
-       
-        $gioitinh='';
-       if(isset($post_data->gioitinh)){
-       $gioitinh= mysqli_real_escape_string($this->conn,trim($post_data->gioitinh));
+
+       $GioiTinh='';
+       if(isset($post_data->GioiTinh)){
+       $GioiTinh= mysqli_real_escape_string($this->conn,trim($post_data->GioiTinh));
        }
-       
-       
-       $diachi='';
-       if(isset($post_data->Diachi)){
-       $diachi= mysqli_real_escape_string($this->conn,trim($post_data->Diachi));
+
+       $Email='';
+       if(isset($post_data->Email)){
+       $Email= mysqli_real_escape_string($this->conn,trim($post_data->Email));
        }
-        $Quocgia='';
-       if(isset($post_data->Quocgia)){
-       $Quocgia= mysqli_real_escape_string($this->conn,trim($post_data->Quocgia));
+         
+       $Username='';
+       if(isset($post_data->Username)){
+       $Username= mysqli_real_escape_string($this->conn,trim($post_data->Username));
        }
        
 
-       $sql="UPDATE thissinhs SET hovaten='$hovaten',email='$email',Diachi='$diachi',Quocgia='$Quocgia',gioitinh='$gioitinh' WHERE SV_id =$SV_id";
+       $sql="UPDATE ThiSinh SET HoTen='$HoTen',NgaySinh='$NgaySinh',GioiTinh='$GioiTinh',Email='$Email',Username='$Username' WHERE MaTS =$MaTS";
      
         $result=  $this->conn->query($sql);
         
          
-         unset($post_data->SV_id); 
+         unset($post_data->MaTS); 
         if($result){
           return 'Đã cập nhật thành công';     
         }else{
@@ -156,12 +162,12 @@ class thisinh
        }   
     }
     
-    public function delete_thongtin_thissinh($id){
+    public function delete_thongtin_thisinh($id){
         
        if(isset($id)){
-       $SV_id1= mysqli_real_escape_string($this->conn,trim($id));
+       $MaTS1= mysqli_real_escape_string($this->conn,trim($id));
 
-       $sql="DELETE FROM  thissinhs  WHERE SV_id =$SV_id1";
+       $sql="DELETE FROM  ThiSinh  WHERE MaTS =$MaTS1";
         $result=  $this->conn->query($sql);
         
         if($result){

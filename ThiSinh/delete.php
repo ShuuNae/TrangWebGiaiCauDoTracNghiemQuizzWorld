@@ -1,13 +1,7 @@
 <?php
 include 'Connect.php';
-$obj=new sinhvien();
-$result=$obj->delete_thongtin_sinhvien($_GET['SV_id']);
+$obj=new thisinh();
+$result=$obj->delete_thongtin_thisinh($_GET['MaTS']);
 $message['message']=$result;
 echo json_encode($message);
-
-
-
-
-
-
 ?>

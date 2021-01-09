@@ -1,8 +1,8 @@
 <?php 
 include 'Connect.php';
-$obj=new sinhvien();
+$obj=new thisinh();
 $data = json_decode(file_get_contents("php://input"));
-$result=$obj->update_thongtin_sinhvien($data);
+$result=$obj->update_thongtin_thisinh($data);
 $message['message']=$result;
 echo json_encode($message);
 ?>

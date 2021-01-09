@@ -1,10 +1,8 @@
 
 <?php
-include 'sinhvien.php';
-$obj=new sinhvien();
-$sinhvien_data=$obj->Danhsach_sinhvien($_GET['SV_id']);
-echo json_encode($sinhvien_data);
-//echo $sinhvien_data;
-
-
+include 'Connect.php';
+$obj=new thisinh();
+$thisinh_data=$obj->Danhsach_thisinh($_GET['MaTS']);
+echo json_encode($thisinh_data);
+//echo $thisinh_data;
 ?>
