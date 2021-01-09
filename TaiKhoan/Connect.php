@@ -1,8 +1,8 @@
 <?php
-class sinhvien
+class taikhoan
 {
     private $conn;
-    function __construct() //sinhvien()
+    function __construct() //taikhoan()
     {
       session_start();
       $servername = "localhost";
@@ -21,7 +21,7 @@ class sinhvien
 
 
     
-    public function Danhsach_sinhvien($page=1,$search_input=''){
+    public function Danhsach_taikhoan($page=1,$search_input=''){
        $perpage=5;
        $page=($page-1)*$perpage;
        
@@ -31,25 +31,25 @@ class sinhvien
        }
       
      
-       $sql = "SELECT * FROM sinhviens $search ORDER BY SV_id desc LIMIT $page,$perpage";
+       $sql = "SELECT * FROM TaiKhoan $search ORDER BY SV_id desc LIMIT $page,$perpage";
      
        $query=  $this->conn->query($sql);
-       $sinhvien=array();
+       $taikhoan=array();
        if ($query->num_rows > 0) {
        while ($row = $query->fetch_assoc()) {
-          $sinhvien['sinhvien_data'][]= $row;
+          $taikhoan['taikhoan_data'][]= $row;
        }
        }       
        
-    $count_sql = "SELECT COUNT(*) FROM sinhviens $search";
+    $count_sql = "SELECT COUNT(*) FROM TaiKhoan $search";
     $query=  $this->conn->query($count_sql);
     $total = mysqli_fetch_row($query);
-    $sinhvien['total'][]= $total;       
+    $taikhoan['total'][]= $total;       
        
-    return $sinhvien;  
+    return $taikhoan;  
     }
     
-    public function Tao_thongtin_sinhvien($post_data=array()){
+    public function Tao_thongtin_taikhoan($post_data=array()){
          
     
        $hovaten='';
@@ -79,12 +79,12 @@ class sinhvien
        
       
      
-       $sql="INSERT INTO sinhviens(hovaten, email, Diachi,Quocgia,gioitinh) VALUES ('$hovaten', '$email', '$diachi','$Quocgia','$gioitinh')";
+       $sql="INSERT INTO TaiKhoan(hovaten, email, Diachi,Quocgia,gioitinh) VALUES ('$hovaten', '$email', '$diachi','$Quocgia','$gioitinh')";
         
         $result=  $this->conn->query($sql);
         
         if($result){
-          return 'Đã thêm được 1 sinh viên';     
+          return 'Đã thêm được 1 tài khoản';     
         }else{
            return 'Kiểm tra thông tin để nhập vào, lỗi';     
         }
@@ -95,11 +95,11 @@ class sinhvien
         
     }
     
-    public function view_sinhvien_id($id){
+    public function view_taikhoan_id($id){
        if(isset($id)){
        $SV_id1= mysqli_real_escape_string($this->conn,trim($id));
        //echo $SV_id1;
-       $sql="Select * from sinhviens where SV_id=$SV_id1";
+       $sql="Select * from TaiKhoan where SV_id=$SV_id1";
         
        $result=  $this->conn->query($sql);
      
@@ -109,7 +109,7 @@ class sinhvien
     }
     
     
-    public function update_thongtin_sinhvien($post_data=array()){
+    public function update_thongtin_taikhoan($post_data=array()){
        if( isset($post_data->SV_id)){
        $SV_id=mysqli_real_escape_string($this->conn,trim($post_data->SV_id));
            
@@ -138,7 +138,7 @@ class sinhvien
        }
        
 
-       $sql="UPDATE sinhviens SET hovaten='$hovaten',email='$email',Diachi='$diachi',Quocgia='$Quocgia',gioitinh='$gioitinh' WHERE SV_id =$SV_id";
+       $sql="UPDATE TaiKhoan SET hovaten='$hovaten',email='$email',Diachi='$diachi',Quocgia='$Quocgia',gioitinh='$gioitinh' WHERE SV_id =$SV_id";
      
         $result=  $this->conn->query($sql);
         
@@ -156,12 +156,12 @@ class sinhvien
        }   
     }
     
-    public function delete_thongtin_sinhvien($id){
+    public function delete_thongtin_taikhoan($id){
         
        if(isset($id)){
        $SV_id1= mysqli_real_escape_string($this->conn,trim($id));
 
-       $sql="DELETE FROM  sinhviens  WHERE SV_id =$SV_id1";
+       $sql="DELETE FROM  TaiKhoan  WHERE SV_id =$SV_id1";
         $result=  $this->conn->query($sql);
         
         if($result){

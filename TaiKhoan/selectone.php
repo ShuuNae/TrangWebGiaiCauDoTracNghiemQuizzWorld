@@ -1,10 +1,10 @@
 
 <?php
-include 'sinhvien.php';
-$obj=new sinhvien();
-$sinhvien_data=$obj->Danhsach_sinhvien($_GET['SV_id']);
-echo json_encode($sinhvien_data);
-//echo $sinhvien_data;
+include 'taikhoan.php';
+$obj=new taikhoan();
+$taikhoan_data=$obj->Danhsach_taikhoan($_GET['SV_id']);
+echo json_encode($taikhoan_data);
+//echo $taikhoan_data;
 
 
 ?>
