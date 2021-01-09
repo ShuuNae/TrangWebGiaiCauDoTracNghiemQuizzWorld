@@ -31,7 +31,7 @@ create table TaiKhoan
 
 create table ThiSinh
 (
-	MaThiSinh varchar(10) not null primary key,
+	MaTS varchar(10) not null primary key,
 	HoTen nvarchar(50) not null,
 	NgaySinh date not null,
 	GioiTinh char(1) default 'M',
@@ -43,18 +43,18 @@ create table ThiSinh
 create table KetQua
 (
 	STT int primary key AUTO_INCREMENT,
-	MaThiSinh varchar(10) not null,
+	MaTS varchar(10) not null,
 	ThoiGian datetime null,
 	LanThi int not null,
 	KetQua varchar(5) not null,
-	foreign key (MaThiSinh) references ThiSinh(MaThiSinh)
+	foreign key (MaTS) references ThiSinh(MaTS)
 );
 /*procedure*/
 DELIMITER //
 create procedure prc_DangKiTaiKhoan
 	@username varchar(20),
 	@password varchar(20),
-	@mathisinh varchar(10),
+	@MaTS varchar(10),
 	@hotenthisinh nvarchar(50),
 	@ngaysinh date,
 	@gioitinh char(1),
@@ -62,7 +62,7 @@ create procedure prc_DangKiTaiKhoan
 as
 begin
 	insert into TaiKhoan values(@username,@password,0)
-	insert into ThiSinh values(@mathisinh,@hotenthisinh,@ngaysinh,@gioitinh,@diachi,@username)
+	insert into ThiSinh values(@MaTS,@hotenthisinh,@ngaysinh,@gioitinh,@diachi,@username)
 end
 DELIMITER ;
 DELIMITER //
@@ -97,7 +97,7 @@ as
 begin
 	select *
 	from ThiSinh
-	where MaThiSinh like '%'+@chuoitimkiem+'%' or HoTenThiSinh like '%'+@chuoitimkiem+'%' or NgaySinh like '%'+@chuoitimkiem+'%'
+	where MaTS like '%'+@chuoitimkiem+'%' or HoTenThiSinh like '%'+@chuoitimkiem+'%' or NgaySinh like '%'+@chuoitimkiem+'%'
 	or GioiTinh like '%'+@chuoitimkiem+'%' or DiaChi like '%'+@chuoitimkiem+'%' or Username like '%'+@chuoitimkiem+'%'
 end
 DELIMITER ;
@@ -107,20 +107,20 @@ create procedure prc_TimKiemKetQua
 as
 begin
 	if(@ketqua = N'Đậu')
-		select KetQua.MaThiSinh as N'Mã Thí Sinh',ThiSinh.HoTenThiSinh as N'Họ Tên',
+		select KetQua.MaTS as N'Mã Thí Sinh',ThiSinh.HoTenThiSinh as N'Họ Tên',
 		KetQua.LanThi as N'Lần Thi',KetQua.ThoiGian as N'Thời Gian ',KetQua.KetQua as N'Kết Quả'
-		from KetQua inner join ThiSinh on KetQua.MaThiSinh = ThiSinh.MaThiSinh
+		from KetQua inner join ThiSinh on KetQua.MaTS = ThiSinh.MaTS
 		where CONVERT(int,SUBSTRING(KetQua,1,2)) >=16
 	if(@ketqua = N'Trượt')
-		select KetQua.MaThiSinh as N'Mã Thí Sinh',ThiSinh.HoTenThiSinh as N'Họ Tên',
+		select KetQua.MaTS as N'Mã Thí Sinh',ThiSinh.HoTenThiSinh as N'Họ Tên',
 		KetQua.LanThi as N'Lần Thi',KetQua.ThoiGian as N'Thời Gian ',KetQua.KetQua as N'Kết Quả'
-		from KetQua inner join ThiSinh on KetQua.MaThiSinh = ThiSinh.MaThiSinh
+		from KetQua inner join ThiSinh on KetQua.MaTS = ThiSinh.MaTS
 		where CONVERT(int,SUBSTRING(KetQua,1,2)) < 16
 	else
-		select KetQua.MaThiSinh as N'Mã Thí Sinh',ThiSinh.HoTenThiSinh as N'Họ Tên',
+		select KetQua.MaTS as N'Mã Thí Sinh',ThiSinh.HoTenThiSinh as N'Họ Tên',
 		KetQua.LanThi as N'Lần Thi',KetQua.ThoiGian as N'Thời Gian ',KetQua.KetQua as N'Kết Quả'
-		from KetQua inner join ThiSinh on KetQua.MaThiSinh = ThiSinh.MaThiSinh
-		where ThiSinh.HoTenThiSinh like '%'+@ketqua+'%' or KetQua.MaThiSinh like '%'+@ketqua+'%' or KetQua.LanThi like '%'+@ketqua+'%' or KetQua.ThoiGian like '%'+@ketqua+'%' or KetQua.KetQua like '%'+@ketqua
+		from KetQua inner join ThiSinh on KetQua.MaTS = ThiSinh.MaTS
+		where ThiSinh.HoTenThiSinh like '%'+@ketqua+'%' or KetQua.MaTS like '%'+@ketqua+'%' or KetQua.LanThi like '%'+@ketqua+'%' or KetQua.ThoiGian like '%'+@ketqua+'%' or KetQua.KetQua like '%'+@ketqua
 end
 DELIMITER ;
 
