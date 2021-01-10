@@ -173,55 +173,56 @@ insert into DapAn(NDDA,MaCH,DungSai) values ('Ngón Tay','10',1);
 insert into DapAn(NDDA,MaCH,DungSai) values ('Chân','10',0);
 
 -- Cây cỏ --
-insert into DapAn(NDDA,MaCH,DungSai) values ('','11',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','11',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','11',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','11',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây chuối','11',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây ổi','11',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây bắp','11',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây nhãn','11',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','12',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','12',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','12',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','12',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây nhãn','12',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây Trạng Nguyên','12',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây vải','12',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây dừa','12',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','13',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','13',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','13',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','13',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Rau muống','13',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Rau dền','13',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Rau má','13',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Rau đắng','13',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','14',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','14',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','14',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','14',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Bụi tre','14',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Bụi chuối','14',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Bụi cỏ','14',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Bụi phấn','14',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','15',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','15',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','15',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','15',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Ổi','15',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Dưa','15',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Khoai','15',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Ngô (bắp)','15',1);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','16',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','16',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','16',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','16',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây tre','16',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây ổi','16',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây dừa','16',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây vải','16',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','17',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','17',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','17',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','17',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cà pháo','17',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cà chua','17',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cà rốt','17',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cà bát','17',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','18',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','18',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','18',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','18',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cá quả','18',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cá chép','18',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cá đuối','18',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cá bống','18',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','19',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','19',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','19',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','19',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây cọ','19',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây nhãn','19',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây vải','19',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây dừa','19',1);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','20',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','20',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','20',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','20',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây ngô','20',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây đậu','20',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây sắn','20',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('Cây đay','20',0);
+
 -- Loài vật --
 insert into DapAn(NDDA,MaCH,DungSai) values ('','21',);
 insert into DapAn(NDDA,MaCH,DungSai) values ('','21',);
