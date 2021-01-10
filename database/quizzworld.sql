@@ -8,14 +8,14 @@ create table Phan(
 create table CauHoi
 (
 	MaCH varchar(3) not null primary key,
-	NDCH nvarchar(1000) not null,
+	NDCH varchar(1000) not null,
 	MaPhan	smallint not null references Phan(MaPhan)
 );
 
 create table DapAn
 (
 	MaDA int not null,
-	NDDA nvarchar(300) not null,
+	NDDA varchar(300) not null,
 	MaCH varchar(3) not null,
 	DungSai bit not null,
 	primary key(MaDA,NDDA),
@@ -32,11 +32,12 @@ create table TaiKhoan
 create table ThiSinh
 (
 	MaTS varchar(10) not null primary key,
-	HoTen nvarchar(50) not null,
+	HoTen varchar(50) not null,
 	NgaySinh date not null,
 	GioiTinh char(1) default 'M',
     Email varchar(100) not null,
 	Username varchar(20) not null,
+    HinhAnh text null,
 	foreign key (Username) references TaiKhoan(Username)
 );
 
@@ -49,33 +50,57 @@ create table KetQua
 	KetQua varchar(5) not null,
 	foreign key (MaTS) references ThiSinh(MaTS)
 );
+
+-- Thêm dữ liệu --
+-- Bảng Phần --
+insert into Phan(MaPhan, TenPhan) values ();
+insert into Phan(MaPhan, TenPhan) values ();
+insert into Phan(MaPhan, TenPhan) values ();
+insert into Phan(MaPhan, TenPhan) values ();
+insert into Phan(MaPhan, TenPhan) values ();
+-- Bảng Câu hỏi --
+
+-- Bảng đáp án --
+
+-- Bảng tài khoản -- 
+
+-- Bảng thí sinh -- 
+
+-- Bảng Kết quả --
+
+
+
+
+
+
 /*procedure*/
 DELIMITER //
 create procedure prc_DangKiTaiKhoan
 	@username varchar(20),
 	@password varchar(20),
 	@MaTS varchar(10),
-	@hotenthisinh nvarchar(50),
-	@ngaysinh date,
-	@gioitinh char(1),
-	@diachi nvarchar(50)
+	@HoTen varchar(50),
+	@NgaySinh date,
+	@GioiTinh char(1),
+	@Email varchar(50),
+    @HinhAnh text
 as
 begin
 	insert into TaiKhoan values(@username,@password,0)
-	insert into ThiSinh values(@MaTS,@hotenthisinh,@ngaysinh,@gioitinh,@diachi,@username)
+	insert into ThiSinh values(@MaTS,@HoTen,@NgaySinh,@GioiTinh,@Email,@username,@HinhAnh)
 end
 DELIMITER ;
 DELIMITER //
 create procedure prc_SuaThongTinThiSinh
 	@username varchar(20),
-	@hotenthisinh nvarchar(50),
-	@ngaysinh date,
-	@gioitinh char(1),
-	@diachi nvarchar(50)
+	@HoTen varchar(50),
+	@NgaySinh date,
+	@GioiTinh char(1),
+	@Email varchar(50)
 as
 begin
 	update ThiSinh 
-	set HoTenThiSinh = @hotenthisinh, NgaySinh = @ngaysinh, GioiTinh = @gioitinh, DiaChi = @diachi
+	set HoTen = @HoTen, NgaySinh = @NgaySinh, GioiTinh = @GioiTinh, Email = @Email
 	where Username = @username
 end
 DELIMITER ;
@@ -92,41 +117,41 @@ end
 DELIMITER ;
 DELIMITER //
 create procedure prc_TimKiemThongTinThiSinh
-	@chuoitimkiem nvarchar(50)
+	@chuoitimkiem varchar(50)
 as
 begin
 	select *
 	from ThiSinh
-	where MaTS like '%'+@chuoitimkiem+'%' or HoTenThiSinh like '%'+@chuoitimkiem+'%' or NgaySinh like '%'+@chuoitimkiem+'%'
-	or GioiTinh like '%'+@chuoitimkiem+'%' or DiaChi like '%'+@chuoitimkiem+'%' or Username like '%'+@chuoitimkiem+'%'
+	where MaTS like '%'+@chuoitimkiem+'%' or HoTen like '%'+@chuoitimkiem+'%' or NgaySinh like '%'+@chuoitimkiem+'%'
+	or GioiTinh like '%'+@chuoitimkiem+'%' or Email like '%'+@chuoitimkiem+'%' or Username like '%'+@chuoitimkiem+'%'
 end
 DELIMITER ;
 DELIMITER //
 create procedure prc_TimKiemKetQua 
-	@ketqua nvarchar(50)
+	@ketqua varchar(50)
 as
 begin
 	if(@ketqua = N'Đậu')
-		select KetQua.MaTS as N'Mã Thí Sinh',ThiSinh.HoTenThiSinh as N'Họ Tên',
+		select KetQua.MaTS as N'Mã Thí Sinh',ThiSinh.HoTen as N'Họ Tên',
 		KetQua.LanThi as N'Lần Thi',KetQua.ThoiGian as N'Thời Gian ',KetQua.KetQua as N'Kết Quả'
 		from KetQua inner join ThiSinh on KetQua.MaTS = ThiSinh.MaTS
 		where CONVERT(int,SUBSTRING(KetQua,1,2)) >=16
 	if(@ketqua = N'Trượt')
-		select KetQua.MaTS as N'Mã Thí Sinh',ThiSinh.HoTenThiSinh as N'Họ Tên',
+		select KetQua.MaTS as N'Mã Thí Sinh',ThiSinh.HoTen as N'Họ Tên',
 		KetQua.LanThi as N'Lần Thi',KetQua.ThoiGian as N'Thời Gian ',KetQua.KetQua as N'Kết Quả'
 		from KetQua inner join ThiSinh on KetQua.MaTS = ThiSinh.MaTS
 		where CONVERT(int,SUBSTRING(KetQua,1,2)) < 16
 	else
-		select KetQua.MaTS as N'Mã Thí Sinh',ThiSinh.HoTenThiSinh as N'Họ Tên',
+		select KetQua.MaTS as N'Mã Thí Sinh',ThiSinh.HoTen as N'Họ Tên',
 		KetQua.LanThi as N'Lần Thi',KetQua.ThoiGian as N'Thời Gian ',KetQua.KetQua as N'Kết Quả'
 		from KetQua inner join ThiSinh on KetQua.MaTS = ThiSinh.MaTS
-		where ThiSinh.HoTenThiSinh like '%'+@ketqua+'%' or KetQua.MaTS like '%'+@ketqua+'%' or KetQua.LanThi like '%'+@ketqua+'%' or KetQua.ThoiGian like '%'+@ketqua+'%' or KetQua.KetQua like '%'+@ketqua
+		where ThiSinh.HoTen like '%'+@ketqua+'%' or KetQua.MaTS like '%'+@ketqua+'%' or KetQua.LanThi like '%'+@ketqua+'%' or KetQua.ThoiGian like '%'+@ketqua+'%' or KetQua.KetQua like '%'+@ketqua
 end
 DELIMITER ;
 
 create procedure prc_ThemCauHoi
 	@MaCH varchar(3),
-	@ndcauhoi nvarchar(500),
+	@ndcauhoi varchar(500),
 	@maphan smallint,
 	@hinh varchar(20)
 as
@@ -137,7 +162,7 @@ DELIMITER ;
 
 create procedure prc_ThemDapAn
 	@MaDA int,
-	@NDDA nvarchar(300),
+	@NDDA varchar(300),
 	@MaCH varchar(3),
 	@dungsai bit
 as
