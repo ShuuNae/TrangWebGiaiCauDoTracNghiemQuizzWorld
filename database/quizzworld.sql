@@ -85,16 +85,16 @@ insert into CauHoi(NDCH, MaPhan) values ('Cây cao vòi vọi,<br>Có đọi nư
 insert into CauHoi(NDCH, MaPhan) values ('Cây chi có trái không cành<br>Có hai thằng bé rập rình hai bên<br>Là cây gì ?','CC');
 
 -- Loài vật --
-insert into CauHoi(NDCH, MaPhan) values ('','LV');
-insert into CauHoi(NDCH, MaPhan) values ('','LV');
-insert into CauHoi(NDCH, MaPhan) values ('','LV');
-insert into CauHoi(NDCH, MaPhan) values ('','LV');
-insert into CauHoi(NDCH, MaPhan) values ('','LV');
-insert into CauHoi(NDCH, MaPhan) values ('','LV');
-insert into CauHoi(NDCH, MaPhan) values ('','LV');
-insert into CauHoi(NDCH, MaPhan) values ('','LV');
-insert into CauHoi(NDCH, MaPhan) values ('','LV');
-insert into CauHoi(NDCH, MaPhan) values ('','LV');
+insert into CauHoi(NDCH, MaPhan) values ('Loài vật nào sau đây có thể thở bằng mông?','LV');
+insert into CauHoi(NDCH, MaPhan) values ('Loài chim nào có khả năng bay ngược?','LV');
+insert into CauHoi(NDCH, MaPhan) values ('Loài cá nước ngọt nào là động vật ăn thịt?','LV');
+insert into CauHoi(NDCH, MaPhan) values ('Bộ phận nào trên người cá voi xanh nặng xấp xỉ một con voi châu Á?','LV');
+insert into CauHoi(NDCH, MaPhan) values ('Cơ quan khứu giác của loài ong mật nằm ở...','LV');
+insert into CauHoi(NDCH, MaPhan) values ('Loài vật nào sau đây đạt được khoái cảm khi giao phối?','LV');
+insert into CauHoi(NDCH, MaPhan) values ('Con người sẽ chết nếu ăn phải gan của loài động vật nào sau đây?','LV');
+insert into CauHoi(NDCH, MaPhan) values ('Bạch tuộc có tất cả bao nhiêu quả tim?','LV');
+insert into CauHoi(NDCH, MaPhan) values ('Sản phẩm nào của động vật có hạn sử dụng vĩnh viễn?','LV');
+insert into CauHoi(NDCH, MaPhan) values ('Con gì chân ngắn<br>Mà lại có màng<br>Mỏ bẹt màu vàng<br>Hay kêu cạp cạp?','LV');
 
 -- Đời sống --
 insert into CauHoi(NDCH, MaPhan) values ('','DS');
@@ -122,257 +122,257 @@ insert into CauHoi(NDCH, MaPhan) values ('','TH');
 
 -- Bảng đáp án --
 -- Con người --
-insert into DapAn(NDDA,MaCH,DungSai) values ('Đầu, hai đầu gối','1',1);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Đầu, hai củi trỏ','1',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Đầu, hai bàn tay','1',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Đầu, hai bàn chân','1',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Đầu, hai đầu gối','1',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Đầu, hai củi trỏ','1',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Đầu, hai bàn tay','1',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Đầu, hai bàn chân','1',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('Đầu tóc mượn','2',1);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Mắt','2',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Miệng','2',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Tay','2',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Đầu tóc mượn','2',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Mắt','2',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Miệng','2',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Tay','2',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('Bàn chân','3',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Bàn tay','3',1);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cánh tay','3',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Chân','3',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Bàn chân','3',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Bàn tay','3',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Cánh tay','3',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Chân','3',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('Bàn chân','4',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cánh tay','4',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Bàn tay','4',1);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Đôi chân','4',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Bàn chân','4',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Cánh tay','4',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Bàn tay','4',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Đôi chân','4',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('Mũi','5',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Miệng','5',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Đôi mi','5',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Đôi mắt','5',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Mũi','5',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Miệng','5',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Đôi mi','5',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Đôi mắt','5',1);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('Bàn tay','6',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Đôi tay','6',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Bàn chân','6',1);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Đôi chân','6',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Bàn tay','6',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Đôi tay','6',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Bàn chân','6',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Đôi chân','6',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('Con ngươi','7',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Con mắt','7',1);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Miệng','7',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Tai','7',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Con ngươi','7',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Con mắt','7',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Miệng','7',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Tai','7',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cái tay','8',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cái chân','8',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cái tai','8',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cái bóng','8',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Cái tay','8',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Cái chân','8',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Cái tai','8',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Cái bóng','8',1);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('Ngón Chân','9',1);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Ngón tay','9',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Tai','9',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Mũi','9',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Ngón Chân','9',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Ngón tay','9',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Tai','9',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Mũi','9',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('Ngón chân','10',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Tay','10',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Ngón Tay','10',1);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Chân','10',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Ngón chân','10',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Tay','10',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Ngón Tay','10',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Chân','10',0);
 
 -- Cây cỏ --
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây chuối','11',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây ổi','11',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây bắp','11',1);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây nhãn','11',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Cây chuối','11',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Cây ổi','11',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Cây bắp','11',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Cây nhãn','11',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây nhãn','12',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây Trạng Nguyên','12',1);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây vải','12',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây dừa','12',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Cây nhãn','12',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Cây Trạng Nguyên','12',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Cây vải','12',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Cây dừa','12',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('Rau muống','13',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Rau dền','13',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Rau má','13',1);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Rau đắng','13',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Rau muống','13',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Rau dền','13',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Rau má','13',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Rau đắng','13',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('Bụi tre','14',1);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Bụi chuối','14',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Bụi cỏ','14',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Bụi phấn','14',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Bụi tre','14',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Bụi chuối','14',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Bụi cỏ','14',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Bụi phấn','14',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('Ổi','15',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Dưa','15',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Khoai','15',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Ngô (bắp)','15',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Ổi','15',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Dưa','15',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Khoai','15',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Ngô (bắp)','15',1);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây tre','16',1);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây ổi','16',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây dừa','16',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây vải','16',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Cây tre','16',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Cây ổi','16',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Cây dừa','16',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Cây vải','16',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cà pháo','17',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cà chua','17',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cà rốt','17',1);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cà bát','17',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Cà pháo','17',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Cà chua','17',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Cà rốt','17',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Cà bát','17',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cá quả','18',1);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cá chép','18',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cá đuối','18',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cá bống','18',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Cá quả','18',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Cá chép','18',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Cá đuối','18',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Cá bống','18',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây cọ','19',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây nhãn','19',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây vải','19',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây dừa','19',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Cây cọ','19',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Cây nhãn','19',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Cây vải','19',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Cây dừa','19',1);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây ngô','20',1);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây đậu','20',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây sắn','20',0);
-insert into DapAn(NDDA,MaCH,DungSai) values ('Cây đay','20',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Cây ngô','20',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Cây đậu','20',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Cây sắn','20',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Cây đay','20',0);
 
 -- Loài vật --
-insert into DapAn(NDDA,MaCH,DungSai) values ('','21',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','21',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','21',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','21',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Kangaroo','21',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Rùa','21',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Cá mập','21',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Chồn hương','21',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','22',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','22',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','22',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','22',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. chim én','22',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. chim ruồi','22',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. chim hải âu','22',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. chim sẻ','22',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','23',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','23',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','23',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','23',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Cá Piranha','23',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Cá chép','23',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Cá nóc','23',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Cá trê','23',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','24',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','24',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','24',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','24',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Vây cá','24',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Não cá','24',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Lưỡi cá','24',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Mắt cá','24',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','25',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','25',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','25',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','25',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Đầu','25',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Bụng','25',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Râu','25',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Chân','25',1);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','26',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','26',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','26',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','26',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Ong','26',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Ếch','26',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Bạch tuộc','26',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Cá heo','26',1);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','27',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','27',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','27',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','27',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Chim cánh cụt','27',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Gấu Bắc Cực','27',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Rắn hổ mang','27',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Gấu xám','27',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','28',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','28',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','28',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','28',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. 1','28',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. 2','28',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. 3','28',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. 4','28',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','29',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','29',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','29',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','29',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Mật ong','29',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Vỏ ốc','29',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Tơ nhện','29',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Tơ tằm','29',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','30',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','30',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','30',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','30',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Con gà','30',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Con bò','30',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Con vịt','30',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Con dê','30',0);
 -- Đời sống --
-insert into DapAn(NDDA,MaCH,DungSai) values ('','31',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','31',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','31',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','31',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','31',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','31',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','31',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','31',);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','32',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','32',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','32',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','32',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','32',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','32',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','32',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','32',);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','33',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','33',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','33',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','33',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','33',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','33',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','33',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','33',);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','34',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','34',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','34',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','34',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','34',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','34',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','34',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','34',);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','35',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','35',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','35',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','35',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','35',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','35',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','35',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','35',);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','36',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','36',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','36',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','36',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','36',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','36',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','36',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','36',);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','37',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','37',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','37',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','37',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','37',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','37',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','37',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','37',);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','38',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','38',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','38',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','38',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','38',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','38',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','38',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','38',);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','39',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','39',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','39',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','39',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','39',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','39',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','39',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','39',);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','40',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','40',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','40',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','40',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','40',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','40',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','40',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','40',);
 -- Tổng hợp -- 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','41',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','41',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','41',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','41',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','41',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','41',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','41',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','41',);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','42',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','42',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','42',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','42',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','42',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','42',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','42',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','42',);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','43',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','43',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','43',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','43',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','43',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','43',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','43',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','43',);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','44',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','44',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','44',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','44',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','44',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','44',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','44',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','44',);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','45',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','45',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','45',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','45',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','45',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','45',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','45',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','45',);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','46',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','46',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','46',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','46',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','46',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','46',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','46',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','46',);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','47',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','47',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','47',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','47',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','47',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','47',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','47',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','47',);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','48',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','48',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','48',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','48',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','48',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','48',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','48',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','48',);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','49',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','49',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','49',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','49',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','49',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','49',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','49',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','49',);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('','50',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','50',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','50',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('','50',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','50',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','50',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','50',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','50',);
 -- Bảng tài khoản -- 
 insert into TaiKhoan() values ();
 insert into TaiKhoan() values ();
