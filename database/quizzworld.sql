@@ -73,16 +73,16 @@ insert into CauHoi(NDCH, MaPhan) values ('Vừa bằng trái cau, bu nhau đi tr
 insert into CauHoi(NDCH, MaPhan) values ('Vừa bằng điếu thuốc, ngủ ngày ngáy ton ?','CN');
 
 -- Cây cỏ --
-insert into CauHoi(NDCH, MaPhan) values ('','CC');
-insert into CauHoi(NDCH, MaPhan) values ('','CC');
-insert into CauHoi(NDCH, MaPhan) values ('','CC');
-insert into CauHoi(NDCH, MaPhan) values ('','CC');
-insert into CauHoi(NDCH, MaPhan) values ('','CC');
-insert into CauHoi(NDCH, MaPhan) values ('','CC');
-insert into CauHoi(NDCH, MaPhan) values ('','CC');
-insert into CauHoi(NDCH, MaPhan) values ('','CC');
-insert into CauHoi(NDCH, MaPhan) values ('','CC');
-insert into CauHoi(NDCH, MaPhan) values ('','CC');
+insert into CauHoi(NDCH, MaPhan) values ('Ba tháng cuốn cờ bồng con đỏ<br>Một phen cởi giáp cứu dân đen<br>Là cây gì ?','CC');
+insert into CauHoi(NDCH, MaPhan) values ('Bao năm kinh sử dồi mài<br>Anh mong đỗ Trạng, xe về rước em','CC');
+insert into CauHoi(NDCH, MaPhan) values ('Bằng đồng tiền nằm nghiêng giữa bụi<br>Là rau gì ?','CC');
+insert into CauHoi(NDCH, MaPhan) values ('Bên sông cây đứng đợi đò<br>Ai kêu khắc khoải nhớ làng, nhớ quê<br>Là cây gì ?','CC');
+insert into CauHoi(NDCH, MaPhan) values ('Bỏ ngoài nướng trong, ăn ngoài bỏ trong là cái gì?','CC');
+insert into CauHoi(NDCH, MaPhan) values ('Buổi xuân xanh người chuộng, kẻ yêu<br>Càng cao danh vọng, càng nhiều gian nan<br>Lòng không dạ đói lang thang<br>Thương người quân tử hai hàng chong chong<br>Đó là cây gì ?','CC');
+insert into CauHoi(NDCH, MaPhan) values ('Cà gì không có hột','CC');
+insert into CauHoi(NDCH, MaPhan) values ('Cá gì ở trên cây?','CC');
+insert into CauHoi(NDCH, MaPhan) values ('Cây cao vòi vọi,<br>Có đọi nước đầu<br>Là cây gì ?','CC');
+insert into CauHoi(NDCH, MaPhan) values ('Cây chi có trái không cành<br>Có hai thằng bé rập rình hai bên<br>Là cây gì ?','CC');
 
 -- Loài vật --
 insert into CauHoi(NDCH, MaPhan) values ('','LV');
