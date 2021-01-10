@@ -97,28 +97,28 @@ insert into CauHoi(NDCH, MaPhan) values ('Sản phẩm nào của động vật 
 insert into CauHoi(NDCH, MaPhan) values ('Con gì chân ngắn<br>Mà lại có màng<br>Mỏ bẹt màu vàng<br>Hay kêu cạp cạp?','LV');
 
 -- Đời sống --
-insert into CauHoi(NDCH, MaPhan) values ('','DS');
-insert into CauHoi(NDCH, MaPhan) values ('','DS');
-insert into CauHoi(NDCH, MaPhan) values ('','DS');
-insert into CauHoi(NDCH, MaPhan) values ('','DS');
-insert into CauHoi(NDCH, MaPhan) values ('','DS');
-insert into CauHoi(NDCH, MaPhan) values ('','DS');
-insert into CauHoi(NDCH, MaPhan) values ('','DS');
-insert into CauHoi(NDCH, MaPhan) values ('','DS');
-insert into CauHoi(NDCH, MaPhan) values ('','DS');
-insert into CauHoi(NDCH, MaPhan) values ('','DS');
+insert into CauHoi(NDCH, MaPhan) values ('Con sông nào dài nhất bán đảo Đông Dương','DS');
+insert into CauHoi(NDCH, MaPhan) values ('Tứ diện có bao nhiêu đường chéo','DS');
+insert into CauHoi(NDCH, MaPhan) values ('Rắn có mấy lá phổi','DS');
+insert into CauHoi(NDCH, MaPhan) values ('Truyện Kiều có bao nhiêu câu thơ','DS');
+insert into CauHoi(NDCH, MaPhan) values ('Hai điểm duy nhất của địa cầu không quay gọi là gì','DS');
+insert into CauHoi(NDCH, MaPhan) values ('Loài trăn thường ngủ ở đâu','DS');
+insert into CauHoi(NDCH, MaPhan) values ('Nguyên nhân nào gây ra hiện tượng sóng thần ở biển','DS');
+insert into CauHoi(NDCH, MaPhan) values ('Loài lưỡng cư nào thường xuất hiện và kêu to sau cơn mưa','DS');
+insert into CauHoi(NDCH, MaPhan) values ('Châu lục nào có diện tích lớn nhất','DS');
+insert into CauHoi(NDCH, MaPhan) values ('Công thức tính diện tích hình chữ nhật','DS');
 
 -- Tổng hợp -- 
-insert into CauHoi(NDCH, MaPhan) values ('','TH');
-insert into CauHoi(NDCH, MaPhan) values ('','TH');
-insert into CauHoi(NDCH, MaPhan) values ('','TH');
-insert into CauHoi(NDCH, MaPhan) values ('','TH');
-insert into CauHoi(NDCH, MaPhan) values ('','TH');
-insert into CauHoi(NDCH, MaPhan) values ('','TH');
-insert into CauHoi(NDCH, MaPhan) values ('','TH');
-insert into CauHoi(NDCH, MaPhan) values ('','TH');
-insert into CauHoi(NDCH, MaPhan) values ('','TH');
-insert into CauHoi(NDCH, MaPhan) values ('','TH');
+insert into CauHoi(NDCH, MaPhan) values ('Mắt cận thị là mắt mà khi không điều tiết có tiêu điểm nằm ở đâu?','TH');
+insert into CauHoi(NDCH, MaPhan) values ('Augustin Louis Cauchy là nhà toán học nước nào?','TH');
+insert into CauHoi(NDCH, MaPhan) values ('Ở người có bao nhiêu cặp nhiễm sắc thể?','TH');
+insert into CauHoi(NDCH, MaPhan) values ('Ban ngày hay ban đêm trái đất quay quanh mặt trời nhanh hơn?','TH');
+insert into CauHoi(NDCH, MaPhan) values ('Ai là người đưa ra ba định luật di truyền?','TH');
+insert into CauHoi(NDCH, MaPhan) values ('Sóng điện từ có bước sóng từ 100m – 10m được gọi là sóng gì?','TH');
+insert into CauHoi(NDCH, MaPhan) values ('Huyện đảo Phú Quốc thuộc tỉnh nào?','TH');
+insert into CauHoi(NDCH, MaPhan) values ('Cầu thủ nào đã đạt danh hiệu quả bóng vàng thế giới 2006?','TH');
+insert into CauHoi(NDCH, MaPhan) values ('Vị vua nào đã đặt quốc hiệu nước ta là Việt Nam như hiện nay?','TH');
+insert into CauHoi(NDCH, MaPhan) values ('Tác phẩm "Bản án chế độ thực dân" của Hồ Chí Minh xuất bản lần đầu tiên ở đâu?','TH');
 
 -- Bảng đáp án --
 -- Con người --
@@ -274,105 +274,105 @@ insert into DapAn(NDDA,MaCH,DungSai) values ('B. Con bò','30',0);
 insert into DapAn(NDDA,MaCH,DungSai) values ('C. Con vịt','30',1);
 insert into DapAn(NDDA,MaCH,DungSai) values ('D. Con dê','30',0);
 -- Đời sống --
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','31',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','31',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','31',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','31',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Sông Hồng','31',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Sông Thầy','31',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Mê Kông','31',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Sông Ấn','31',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','32',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','32',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','32',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','32',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. 8','32',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. 4','32',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. 2','32',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. 0','32',1);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','33',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','33',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','33',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','33',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. 2','33',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. 4','33',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. 1','33',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. 3','33',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','34',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','34',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','34',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','34',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. 3425','34',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. 3542','34',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. 3323','34',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. 3254','34',1);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','35',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','35',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','35',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','35',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Địa cực','35',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Trục','35',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Không có','35',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Chỉ có 1 điểm','35',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','36',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','36',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','36',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','36',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Trên nệm','36',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Trên cây','36',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Trên đá','36',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Trong hang','36',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','37',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','37',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','37',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','37',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Gió lớn','37',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Bão','37',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Mưa','37',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Động đất','37',1);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','38',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','38',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','38',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','38',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Ếch','38',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Cóc','38',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Nhái','38',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Ễnh ương','38',1);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','39',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','39',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','39',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','39',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Châu Á','39',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Châu Mỹ','39',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Châu Phi','39',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Châu Âu','39',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','40',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','40',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','40',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','40',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. a+b','40',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. (a+b)x2','40',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. a x b','40',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. a-b','40',0);
 -- Tổng hợp -- 
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','41',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','41',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','41',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','41',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Tiêu điểm nằm trước võng mạc','41',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Tiêu điểm nằm sau võng mạc','41',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Tiêu điểm nằm giữa võng mạc','41',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Đáp án khác','41',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','42',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','42',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','42',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','42',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Đức','42',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Anh','42',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Pháp','42',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Tây Ban Nha','42',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','43',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','43',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','43',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','43',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. 13 cặp','43',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. 23 cặp','43',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. 21 cặp','43',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. 14 cặp','43',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','44',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','44',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','44',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','44',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Ban ngày','44',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Ban đêm','44',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Cả ngày và đêm trái đất quay như nhau','44',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Đáp án khác','44',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','45',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','45',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','45',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','45',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Albert Einstein','45',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Newton','45',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Men – Đen','45',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Galilei','45',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','46',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','46',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','46',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','46',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Sóng siêu ngắn','46',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Sóng ngắn','46',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Sóng siêu dài','46',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Sóng dài','46',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','47',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','47',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','47',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','47',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Trà Vinh','47',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. An Giang','47',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Cà Mau','47',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Kiên Giang','47',1);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','48',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','48',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','48',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','48',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Cafu','48',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Roberto Carlos','48',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Ronaldinho','48',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Fabio Canavaro','48',1);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','49',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','49',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','49',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','49',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Vua Gia Long','49',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Vua Tự Đức','49',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Vua Lê','49',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Đáp án khác','49',0);
 
-insert into DapAn(NDDA,MaCH,DungSai) values ('A. ','50',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('B. ','50',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('C. ','50',);
-insert into DapAn(NDDA,MaCH,DungSai) values ('D. ','50',);
+insert into DapAn(NDDA,MaCH,DungSai) values ('A. Việt Nam','50',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('B. Trung Quốc','50',0);
+insert into DapAn(NDDA,MaCH,DungSai) values ('C. Pháp','50',1);
+insert into DapAn(NDDA,MaCH,DungSai) values ('D. Anh','50',0);
 -- Bảng tài khoản -- 
 insert into TaiKhoan() values ();
 insert into TaiKhoan() values ();
