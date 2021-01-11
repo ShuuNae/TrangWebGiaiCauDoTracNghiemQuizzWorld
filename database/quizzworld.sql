@@ -32,7 +32,7 @@ create table TaiKhoan
 
 create table ThiSinh
 (
-	MaTS varchar(10) not null primary key,
+	MaTS int auto_increment not null primary key,
 	HoTen varchar(50) not null,
 	NgaySinh date not null,
 	GioiTinh char(1) default 'M',
@@ -45,7 +45,7 @@ create table ThiSinh
 create table KetQua
 (
 	STT int primary key AUTO_INCREMENT,
-	MaTS varchar(10) not null,
+	MaTS int not null,
 	ThoiGian datetime null,
 	LanThi int not null,
 	KetQua varchar(5) not null,
@@ -374,14 +374,13 @@ insert into DapAn(NDDA,MaCH,DungSai) values ('B. Trung Quốc','50',0);
 insert into DapAn(NDDA,MaCH,DungSai) values ('C. Pháp','50',1);
 insert into DapAn(NDDA,MaCH,DungSai) values ('D. Anh','50',0);
 -- Bảng tài khoản -- 
-insert into TaiKhoan() values ();
-insert into TaiKhoan() values ();
-insert into TaiKhoan() values ();
-insert into TaiKhoan() values ();
-insert into TaiKhoan() values ();
+insert into TaiKhoan(Username,Password,IsAdmin) values ('admin','admin',1);
+insert into TaiKhoan(Username,Password,IsAdmin) values ('nva123','12345',0);
+insert into TaiKhoan(Username,Password,IsAdmin) values ('nvb123','12345',0);
+
 -- Bảng thí sinh -- 
-insert into ThiSinh() values ();
-insert into ThiSinh() values ();
+insert into ThiSinh(HoTen,NgaySinh,GioiTinh,Email,Username,HinhAnh) values ('Nguyễn Văn A','15-05-1999','M','nguyenvana@gmail.com','nva123',null);
+insert into ThiSinh(HoTen,NgaySinh,GioiTinh,Email,Username,HinhAnh) values ('Nguyễn Văn B','22-08-1999','M','nguyenvanb@gmail.com','nvb123',null);
 
 -- Bảng Kết quả --
 
