@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./all-users.component.css']
 })
 export class AllUsersComponent implements OnInit {
+  url = 'http://localhost/php/TrangWebGiaiCauDoTracNghiemQuizzWorld/Model/NguoiDung/';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  Login() {
+    return this.http.get('${this.url}SelectAllUser.php');
+  }
 
   ngOnInit(): void {
+    this.Login();
   }
 
 }

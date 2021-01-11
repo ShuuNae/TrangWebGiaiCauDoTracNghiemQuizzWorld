@@ -6,7 +6,7 @@ class Nguoidung
     {
       session_start();
       $servername = "localhost";
-      $dbname = "QuizzWorld";
+      $dbname = "quizzworld";
       $username = "root";
       $password = ""; 
       // Create connection
@@ -42,11 +42,24 @@ class Nguoidung
        }
     }
 
+    public function selectAllUser(){
+       $sql = "SELECT * FROM taikhoan ";
+       $query=  $this->conn->query($sql);
+       $nguoidung=array();
+       if ($query->num_rows > 0) {
+       while ($row = $query->fetch_assoc()) {
+          $nguoidung['nguoidung_data'][]= $row;
+       }
+
+       return $nguoidung;
+    }
+
    
     function __destruct() {
     mysqli_close($this->conn);  
     }
     
+   }
 }
 
 ?>
