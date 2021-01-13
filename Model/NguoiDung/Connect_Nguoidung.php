@@ -54,6 +54,8 @@ class Nguoidung
        return $nguoidung;
     }
 
+    
+
    
     function __destruct() {
     mysqli_close($this->conn);  
