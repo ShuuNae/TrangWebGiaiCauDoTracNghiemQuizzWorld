@@ -379,7 +379,7 @@ insert into TaiKhoan(Username,Password,IsAdmin) values ('nvb123','12345',0);
 
 -- Bảng thí sinh -- 
 insert into ThiSinh(HoTen,NgaySinh,GioiTinh,Email,Username,HinhAnh) values ('Nguyễn Văn A','1999-05-22','M','nguyenvana@gmail.com','nva123',null);
-insert into ThiSinh(HoTen,NgaySinh,GioiTinh,Email,Username,HinhAnh) values ('Nguyễn Văn B','1999-06-08','M','nguyenvanb@gmail.com','nvb123',null
+insert into ThiSinh(HoTen,NgaySinh,GioiTinh,Email,Username,HinhAnh) values ('Nguyễn Văn B','1999-06-08','M','nguyenvanb@gmail.com','nvb123',null);
 
 -- Bảng Kết quả --
 
