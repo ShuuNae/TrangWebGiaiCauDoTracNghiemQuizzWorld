@@ -15,11 +15,10 @@ create table CauHoi
 
 create table DapAn
 (
-	MaDA int auto_increment not null,
-	NDDA varchar(300) not null,
-	MaCH varchar(3) not null,
+	MaDA int auto_increment not null primary key,
+	NDDA varchar(1000) not null,
+	MaCH int not null,
 	DungSai bit not null,
-	primary key(MaDA,NDDA),
 	foreign key (MaCH) references CauHoi(MaCH)
 );
 
@@ -379,5 +378,5 @@ insert into TaiKhoan(Username,Password,IsAdmin) values ('nva123','12345',0);
 insert into TaiKhoan(Username,Password,IsAdmin) values ('nvb123','12345',0);
 
 -- Bảng thí sinh -- 
-insert into ThiSinh(HoTen,NgaySinh,GioiTinh,Email,Username,HinhAnh) values ('Nguyễn Văn A','15-05-1999','M','nguyenvana@gmail.com','nva123',null);
-insert into ThiSinh(HoTen,NgaySinh,GioiTinh,Email,Username,HinhAnh) values ('Nguyễn Văn B','22-08-1999','M','nguyenvanb@gmail.com','nvb123',null);
+insert into ThiSinh(HoTen,NgaySinh,GioiTinh,Email,Username,HinhAnh) values ('Nguyễn Văn A','1999-05-22','M','nguyenvana@gmail.com','nva123',null);
+insert into ThiSinh(HoTen,NgaySinh,GioiTinh,Email,Username,HinhAnh) values ('Nguyễn Văn B','1999-06-08','M','nguyenvanb@gmail.com','nvb123',null);
