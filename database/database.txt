@@ -4,13 +4,13 @@ use QuizzWorld;
 
 create table Phan(
 	MaPhan varchar(2) not null primary key,
-    TenPhan varchar(20) not null
+    	TenPhan varchar(20) not null
 );
 create table CauHoi
 (
 	MaCH int auto_increment not null primary key,
 	NDCH varchar(1000) not null,
-	MaPhan	smallint not null references Phan(MaPhan)
+	MaPhan varchar(2) not null references Phan(MaPhan)
 );
 
 create table DapAn
@@ -18,7 +18,7 @@ create table DapAn
 	MaDA int auto_increment not null primary key,
 	NDDA varchar(1000) not null,
 	MaCH int not null,
-	DungSai bit not null,
+	DungSai tinyint(1) not null,
 	foreign key (MaCH) references CauHoi(MaCH)
 );
 
