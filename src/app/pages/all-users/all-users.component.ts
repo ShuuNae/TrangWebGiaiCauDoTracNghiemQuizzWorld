@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-all-users',
@@ -11,11 +12,13 @@ export class AllUsersComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   Login() {
-    return this.http.get('${this.url}SelectAllUser.php');
+    return this.http.get('${this.url}SelectAllUser.php').subscribe((data: any) => {
+      console.log(data);
+      alert(data);
+    })
   }
 
   ngOnInit(): void {
-    this.Login();
   }
 
 }

@@ -13,6 +13,8 @@ import { ChartsComponent } from './pages/charts/charts.component';
 import { AllUsersComponent } from './pages/all-users/all-users.component';
 import { CreateUserComponent } from './pages/create-user/create-user.component';
 import { QuestionManagementComponent } from './pages/question-management/question-management.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -29,9 +31,11 @@ import { QuestionManagementComponent } from './pages/question-management/questio
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
