@@ -7,12 +7,12 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./all-users.component.css']
 })
 export class AllUsersComponent implements OnInit {
-  url = 'http://localhost/php/TrangWebGiaiCauDoTracNghiemQuizzWorld/Model/NguoiDung/';
+  url = 'http://localhost/php/TrangWebGiaiCauDoTracNghiemQuizzWorld/Model/TaiKhoan/';
 
   constructor(private http: HttpClient) { }
 
   Login() {
-    return this.http.get('${this.url}SelectAllUser.php').subscribe((data: any) => {
+    return this.http.get('${this.url}select.php').subscribe((data: any) => {
       console.log(data);
       alert(data);
     })
