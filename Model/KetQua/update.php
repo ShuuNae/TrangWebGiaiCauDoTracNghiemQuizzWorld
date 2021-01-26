@@ -1,4 +1,4 @@
-<?php
+<?php 
  if (isset($_SERVER['HTTP_ORIGIN'])) {
     header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
     header('Access-Control-Allow-Credentials: true');
@@ -17,17 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit(0);
 }
 include 'Connect.php';
-$postdata = file_get_contents("php://input");
-$request = json_decode($postdata);
-$username = $request->Username;
- $obj=new taikhoan();
- $result=$obj->delete_thongtin_taikhoan($username);
+$obj=new ketqua();
+$data = json_decode(file_get_contents("php://input"));
+$result=$obj->update_thongtin_ketqua($data);
 $message['message']=$result;
 echo json_encode($message);
-
-
-
-
-
-
 ?>

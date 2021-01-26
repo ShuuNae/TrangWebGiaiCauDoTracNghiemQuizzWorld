@@ -4,8 +4,8 @@ include 'Connect.php';
 
 
 
-$obj=new taikhoan();
-$taikhoan_list=$obj->Danhsach_taikhoan();
+$obj=new ketqua();
+$taikhoan_list=$obj->Danhsach_ketqua();
 
 
 echo json_encode($taikhoan_list);
