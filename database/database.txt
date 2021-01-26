@@ -26,7 +26,7 @@ create table TaiKhoan
 (
 	Username varchar(20) not null primary key ,
 	Password varchar(20) not null,
-	IsAdmin bit not null
+	IsAdmin tinyint(1) not null
 );
 
 create table ThiSinh
@@ -35,9 +35,8 @@ create table ThiSinh
 	HoTen varchar(50) not null,
 	NgaySinh date not null,
 	GioiTinh char(1) default 'M',
-    Email varchar(100) not null,
+    	Email varchar(100) not null,
 	Username varchar(20) not null,
-    HinhAnh text null,
 	foreign key (Username) references TaiKhoan(Username)
 );
 
@@ -45,10 +44,11 @@ create table KetQua
 (
 	STT int primary key AUTO_INCREMENT,
 	MaTS int not null,
+	MaPhan varchar(2),
 	ThoiGian datetime null,
-	LanThi int not null,
 	KetQua varchar(5) not null,
-	foreign key (MaTS) references ThiSinh(MaTS)
+	foreign key (MaTS) references ThiSinh(MaTS),
+	foreign key (MaPhan) references Phan(MaPhan)
 );
 
 -- Thêm dữ liệu --
@@ -378,5 +378,15 @@ insert into TaiKhoan(Username,Password,IsAdmin) values ('nva123','12345',0);
 insert into TaiKhoan(Username,Password,IsAdmin) values ('nvb123','12345',0);
 
 -- Bảng thí sinh -- 
-insert into ThiSinh(HoTen,NgaySinh,GioiTinh,Email,Username,HinhAnh) values ('Nguyễn Văn A','1999-05-22','M','nguyenvana@gmail.com','nva123',null);
-insert into ThiSinh(HoTen,NgaySinh,GioiTinh,Email,Username,HinhAnh) values ('Nguyễn Văn B','1999-06-08','M','nguyenvanb@gmail.com','nvb123',null);
+insert into ThiSinh(HoTen,NgaySinh,GioiTinh,Email,Username) values ('Nguyễn Văn A','1999-05-22','M','nguyenvana@gmail.com','nva123');
+insert into ThiSinh(HoTen,NgaySinh,GioiTinh,Email,Username) values ('Nguyễn Văn B','1999-06-08','M','nguyenvanb@gmail.com','nvb123');
+
+-- Proceduce -- 
+create proceduce XoaTK
+(
+	@Username varchar(20)
+)
+begin
+	Delete from ThiSinh where Username = @Username
+	Delete from TaiKhoan where Username = @Username
+end;
