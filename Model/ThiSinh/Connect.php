@@ -81,14 +81,26 @@ class thisinh
        if(isset($post_data->Username)){
        $Username= mysqli_real_escape_string($this->conn,trim($post_data->Username));
        }
+
+       $Password='';
+       if(isset($post_data->Password)){
+       $Password= mysqli_real_escape_string($this->conn,trim($post_data->Password));
+       }
+
+       $IsAdmin='';
+       if(isset($post_data->IsAdmin)){
+       $IsAdmin= mysqli_real_escape_string($this->conn,trim($post_data->IsAdmin));
+       }
        
       
      
        $sql="INSERT INTO ThiSinh(MaTS,HoTen,NgaySinh, GioiTinh,Email, Username) VALUES ('$MaTS','$HoTen', '$NgaySinh','$GioiTinh','$Email', '$Username')";
+        $insertAccount="INSERT INTO TaiKhoan(Username, Password, IsAdmin) VALUES ('$Username', '$Password', $IsAdmin)";
         
+        $resultAccount= $this->conn->query($insertAccount);
         $result=  $this->conn->query($sql);
         
-        if($result){
+        if($result && $resultAccount){
           return 'Đã thêm được 1 thí sinh';     
         }else{
            return 'Kiểm tra thông tin để nhập vào, lỗi';     
