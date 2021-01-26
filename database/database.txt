@@ -10,7 +10,8 @@ create table CauHoi
 (
 	MaCH int auto_increment not null primary key,
 	NDCH varchar(1000) not null,
-	MaPhan varchar(2) not null references Phan(MaPhan)
+	MaPhan varchar(2) not null,
+	foreign key (MaPhan) references Phan(MaPhan)
 );
 
 create table DapAn
