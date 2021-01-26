@@ -19,9 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 include 'Connect.php';
 $postdata = file_get_contents("php://input");
 $request = json_decode($postdata);
-$username = $request->Username;
- $obj=new taikhoan();
- $result=$obj->delete_thongtin_taikhoan($username);
+$MaTS = $request->MaTS;
+ $obj=new ketqua();
+ $result=$obj->delete_thongtin_ketqua($MaTS);
 $message['message']=$result;
 echo json_encode($message);
 
