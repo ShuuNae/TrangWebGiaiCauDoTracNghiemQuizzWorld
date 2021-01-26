@@ -114,57 +114,96 @@ class user
        
     return $user;  
     }
-   
-    public function view_user_id($id){
-       if(isset($id)){
-       $id= mysqli_real_escape_string($this->conn,trim($id));
-       //echo $SV_id1;
-       $sql="Select * from user where Username='$username'";
-        
-       $result=  $this->conn->query($sql);
-     
-        return $result->fetch_assoc(); 
-    
-       }  
-    }
-    
-    
-    public function update_thongtin_taikhoan($post_data=array()){
-       if( isset($post_data->Username)){
-       $Username=mysqli_real_escape_string($this->conn,trim($post_data->Username));
-           
-       $Password='';
-       if(isset($post_data->Password)){
-       $Password= mysqli_real_escape_string($this->conn,trim($post_data->Password));
-       }
-       
-       $IsAdmin='';
-       if(isset($post_data->IsAdmin)){
-       $IsAdmin= mysqli_real_escape_string($this->conn,trim($post_data->IsAdmin));
-       }
-       
 
-       $sql="UPDATE TaiKhoan SET Password='$Password',IsAdmin=$IsAdmin WHERE Username ='$Username' ";
-     
-        $result=  $this->conn->query($sql);
+    public function changePassword($post_data=array()){
+      if( isset($post_data->id)){
+      $id=mysqli_real_escape_string($this->conn,trim($post_data->id));
+          
+      $password='';
+      if(isset($post_data->password)){
+      $password= mysqli_real_escape_string($this->conn,trim($post_data->password));
+      }
+      
+      $sql="UPDATE user SET password='$password' WHERE id ='$id' ";
+    
+       $result=  $this->conn->query($sql);
+       
         
-         
-         unset($post_data->Username); 
-        if($result){
-          return 'Đã cập nhật thành công';     
-        }else{
-         return 'Kiểm tra, lỗi cập nhật thông tin  ';     
+        unset($post_data->id); 
+       if($result){
+         return 'Thay đổi mật khẩu thành công';     
+       }else{
+        return 'Lõi thay đổi mật khẩu';     
+       }
+
+      }   
+   }
+
+   public function changeUserInfo($post_data=array()){
+      if( isset($post_data->id)){
+      $id=mysqli_real_escape_string($this->conn,trim($post_data->id));
+          
+      $username='';
+        if(isset($post_data->username)){
+        $username= mysqli_real_escape_string($this->conn,trim($post_data->username));
+        }
+        
+        $fullname='';
+        if(isset($post_data->fullname)){
+        $fullname= mysqli_real_escape_string($this->conn,trim($post_data->fullname));
         }
 
-       }   
-    }
-    
-    public function delete_thongtin_taikhoan($Username){
+        $gender='';
+        if(isset($post_data->gender)){
+        $gender= mysqli_real_escape_string($this->conn,trim($post_data->gender));
+        }
         
-       if(isset($Username)){
-       $Username= mysqli_real_escape_string($this->conn,trim($Username));
+        $email='';
+        if(isset($post_data->email)){
+        $email= mysqli_real_escape_string($this->conn,trim($post_data->email));
+        }
+        
+         $role='';
+        if(isset($post_data->role)){
+        $role= mysqli_real_escape_string($this->conn,trim($post_data->role));
+        }
 
-       $sql="DELETE FROM  TaiKhoan  WHERE Username ='$Username' ";
+      $sql="UPDATE user SET username ='$username', fullname ='$fullname', gender =$gender, email ='$email', role ='$role' where id = $id";
+    
+       $result=  $this->conn->query($sql);
+       
+        
+        unset($post_data->id); 
+       if($result){
+         return 'Đã cập nhật thành công';     
+       }else{
+        return 'Kiểm tra, lỗi cập nhật thông tin  ';     
+       }
+
+      }   
+   }
+   
+   //  public function view_user_id($id){
+   //     if(isset($id)){
+   //     $id= mysqli_real_escape_string($this->conn,trim($id));
+   //     //echo $SV_id1;
+   //     $sql="Select * from user where id='$id'";
+        
+   //     $result=  $this->conn->query($sql);
+     
+   //      return $result->fetch_assoc(); 
+    
+   //     }  
+   //  }
+    
+   
+    
+    public function deleteUser($post_data=array()){
+        
+      if( isset($post_data->id)){
+         $id=mysqli_real_escape_string($this->conn,trim($post_data->id));
+
+       $sql="DELETE FROM  user  WHERE id =$id ";
         $result=  $this->conn->query($sql);
         
         if($result){
