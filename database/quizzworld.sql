@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 26, 2021 lúc 07:03 AM
+-- Thời gian đã tạo: Th1 26, 2021 lúc 09:39 AM
 -- Phiên bản máy phục vụ: 10.4.11-MariaDB
 -- Phiên bản PHP: 7.4.4
 
@@ -407,7 +407,8 @@ INSERT INTO `thisinh` (`MaTS`, `HoTen`, `NgaySinh`, `GioiTinh`, `Email`, `Userna
 -- Chỉ mục cho bảng `cauhoi`
 --
 ALTER TABLE `cauhoi`
-  ADD PRIMARY KEY (`MaCH`);
+  ADD PRIMARY KEY (`MaCH`),
+  ADD KEY `MaPhan` (`MaPhan`);
 
 --
 -- Chỉ mục cho bảng `dapan`
@@ -474,6 +475,12 @@ ALTER TABLE `thisinh`
 --
 -- Các ràng buộc cho các bảng đã đổ
 --
+
+--
+-- Các ràng buộc cho bảng `cauhoi`
+--
+ALTER TABLE `cauhoi`
+  ADD CONSTRAINT `cauhoi_ibfk_1` FOREIGN KEY (`MaPhan`) REFERENCES `phan` (`MaPhan`);
 
 --
 -- Các ràng buộc cho bảng `dapan`
