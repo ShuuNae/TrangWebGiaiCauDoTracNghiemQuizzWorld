@@ -72,12 +72,12 @@ class topic
     
    
     
-    public function deleteUser($post_data=array()){
+    public function deleteTopic($post_data=array()){
         
       if( isset($post_data->id)){
          $id=mysqli_real_escape_string($this->conn,trim($post_data->id));
 
-       $sql="DELETE FROM  user  WHERE id =$id ";
+       $sql="DELETE FROM  topic  WHERE id =$id ";
         $result=  $this->conn->query($sql);
         
         if($result){
