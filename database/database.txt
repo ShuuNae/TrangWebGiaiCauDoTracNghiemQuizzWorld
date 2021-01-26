@@ -382,11 +382,10 @@ insert into ThiSinh(HoTen,NgaySinh,GioiTinh,Email,Username) values ('Nguyễn V�
 insert into ThiSinh(HoTen,NgaySinh,GioiTinh,Email,Username) values ('Nguyễn Văn B','1999-06-08','M','nguyenvanb@gmail.com','nvb123');
 
 -- Proceduce -- 
-create proceduce XoaTK
-(
-	@Username varchar(20)
-)
+delimiter //
+create proceduce XoaTK (IN @Username varchar(20))
 begin
-	Delete from ThiSinh where Username = @Username
-	Delete from TaiKhoan where Username = @Username
-end;
+	Delete from ThiSinh where Username = @Username;
+	Delete from TaiKhoan where Username = @Username;
+end//
+delimiter ;
