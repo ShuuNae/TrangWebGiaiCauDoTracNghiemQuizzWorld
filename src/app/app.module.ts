@@ -14,6 +14,7 @@ import { AllUsersComponent } from './pages/all-users/all-users.component';
 import { CreateUserComponent } from './pages/create-user/create-user.component';
 import { QuestionManagementComponent } from './pages/question-management/question-management.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './pages/login/login.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     ChartsComponent,
     AllUsersComponent,
     CreateUserComponent,
-    QuestionManagementComponent
+    QuestionManagementComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

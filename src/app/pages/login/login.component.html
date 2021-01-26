@@ -1,0 +1,55 @@
+<div class="row my-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="h6 text-uppercase mb-0">Login</h3>
+            </div>
+            <div class="card-body">
+                <form (ngSubmit)="OnSubmit()" class="form-horizontal" 
+                    novalidate="novalidate">
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label">Tên đăng nhập </label>
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-control" data-val="true"
+                                        data-val-maxlength="The field Username must be a string or array type with a maximum length of '15'."
+                                        data-val-maxlength-max="15"
+                                        data-val-minlength="The field Username must be a string or array type with a minimum length of '1'."
+                                        data-val-minlength-min="1" data-val-required="The Username field is required."
+                                        id="Username" maxlength="15" name="Username" placeholder="Username"
+                                        type="text" value="">
+                                    <small class="form-text text-danger mr-3"><span class="field-validation-valid"
+                                            data-valmsg-for="Username" data-valmsg-replace="true"></span></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label">Mật khẩu</label>
+                        <div class="col-md-9">
+                            <input class="form-control" data-val="true"
+                                data-val-maxlength="The field HashPassword must be a string or array type with a maximum length of '128'."
+                                data-val-maxlength-max="128"
+                                data-val-minlength="The field HashPassword must be a string or array type with a minimum length of '8'."
+                                data-val-minlength-min="8" data-val-required="The HashPassword field is required."
+                                id="HashPassword" maxlength="128" name="HashPassword" placeholder="mật khẩu"
+                                type="password">
+                            <small class="form-text text-danger mr-3"><span class="field-validation-valid"
+                                    data-valmsg-for="HashPassword" data-valmsg-replace="true"></span></small>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form-group">
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary" >Login</button>
+                        </div>
+                    </div>
+                    <input name="__RequestVerificationToken" type="hidden"
+                        value="CfDJ8Hlq356NxrVMsFGLbsTsBV9fR2Xv-2ZAurhp8dl10nE1dEBOvwew6wiISnBz1Hlbpt2r8HDiCiK4ivtt7-DfOtVqCzPQOgXttesrGVdfvCFPkBqwe5LA8nWcE-K2oIyZcBqvkSOtefMHFk91-k_iZFnrC2NWuXhQwrnWJUDgsj1oPyDjcQHr5_UMhSmZGswr3w">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
