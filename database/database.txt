@@ -1,0 +1,76 @@
+create database quizz_world;
+use quizz_world;
+
+
+create table topic(
+	id int(11) auto_increment not null primary key,
+	name text not null,
+    	description text not null
+);
+
+create table quizz(
+	id int(11) auto_increment not null primary key,
+	topic_id int(11) not null,
+	question text not null,
+	ansA text not null,
+	ansB text not null,
+	ansC text not null,
+	ansD text not null,
+	correct text not null,
+	foreign key (topic_id) references topic(id)
+); 
+
+create table user
+(
+	id int(11) auto_increment not null primary key,
+	username text not null,
+	password text not null,
+	fullname text not null,
+	gender tinyint(4) not null,
+	email text not null,
+	role text not null	
+);
+
+reate table user_quizzs
+(
+	id int(11) auto_increment not null primary key,
+	user_id int(11) not null,
+	topic_id int(11)  not null,
+	start_at datetime not null,
+	finish_at datetime not null,
+	score float not null,
+	quizz_data longtext not null,
+	foreign key (user_id) references user(id),
+	foreign key (topic_id) references topic(id)
+);
+
+
+-- Thêm dữ liệu --
+-- Bảng topic --
+insert into topic(name,description) values ('Con người','Các câu đố về chủ đề con người' );
+insert into topic(name,description) values ('Cây cỏ','Các câu hỏi về chủ đề cây cỏ');
+insert into topic(name,description) values ('Loài vật','Các câu hỏi về chủ đề loài vật');
+insert into topic(name,description) values ('Đời sống','Các câu hỏi chủ đề về đời sống');
+insert into topic(name,description) values ('Tổng hợp','Các câu hỏi chủ đề về tổng hợp');
+-- Bảng Câu hỏi --
+-- Con người --
+
+insert into quizz(topic_id,question, ansA, ansB, ansC, ansD,correct) values (1,'Ba ông ngồi lại một mâm<br>Một ông có tóc, hai ông trọc đầu ?','Đầu, hai đầu gối','Đầu, hai củi trỏ','Đầu, hai bàn tay','Đầu, hai bàn chân','A');
+
+-- Bảng tài khoản -- 
+insert into TaiKhoan(Username,Password,IsAdmin) values ('admin','admin',1);
+insert into TaiKhoan(Username,Password,IsAdmin) values ('nva123','12345',0);
+insert into TaiKhoan(Username,Password,IsAdmin) values ('nvb123','12345',0);
+
+-- Bảng thí sinh -- 
+insert into ThiSinh(HoTen,NgaySinh,GioiTinh,Email,Username) values ('Nguyễn Văn A','1999-05-22','M','nguyenvana@gmail.com','nva123');
+insert into ThiSinh(HoTen,NgaySinh,GioiTinh,Email,Username) values ('Nguyễn Văn B','1999-06-08','M','nguyenvanb@gmail.com','nvb123');
+
+-- Proceduce -- 
+delimiter $$
+create procedure XoaTK (IN user varchar(20))
+begin
+	Delete from ThiSinh where Username = user;
+	Delete from TaiKhoan where Username = user;
+end;$$
+delimiter ;
