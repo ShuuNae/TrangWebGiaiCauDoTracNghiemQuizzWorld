@@ -163,6 +163,24 @@ class quizz
        }
         
     }
+
+    public function Random10QuizzIn1Topic($post_data=array()){
+      if( isset($post_data->topic_id)){
+        $topic_id=mysqli_real_escape_string($this->conn,trim($post_data->topic_id));
+
+        $sql="SELECT * FROM quizz where topic_id=$topic_id ORDER BY RAND() LIMIT 10 "; 
+        $query=  $this->conn->query($sql);
+       $quizzs=array();
+       if ($query->num_rows > 0) {
+       while ($row = $query->fetch_assoc()) {
+          $quizzs['quizzs_data'][]= $row;
+       }
+    }
+    return $quizzs;
+  }
+
+  }
+
     function __destruct() {
     mysqli_close($this->conn);  
     }

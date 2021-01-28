@@ -1,5 +1,5 @@
 <?php
-class user
+class user_quizzs
 {
     private $conn;
     function __construct() //taikhoan()
@@ -19,75 +19,47 @@ class user
          }
     }
 
-    public function login($post_data=array())
-    {
-      $username='';
-      if(isset($post_data->username)){
-         $username= mysqli_real_escape_string($this->conn,trim($post_data->username));
-         }
-
-         $password='';
-         if(isset($post_data->password)){
-         $password= mysqli_real_escape_string($this->conn,trim($post_data->password));
-         }
-
-       $sql = "SELECT * FROM user Where username='$username' and password='$password'";
-       $query=  $this->conn->query($sql);
-       if ($query->num_rows > 0){
-        while ($row = $query->fetch_assoc()) {
-            $user['data']= $row;
-         }
-         $user['status']=true;
-         $user['message']= "Đăng nhập thành công";
-       }
-       else{
-        $user['message']= "Đăng nhập thất bại";
-        $user['status']=false;
-       }
-       return $user;
-    }
 
     public function AddUserQuizz($post_data=array()){
          
-    
-        $username='';
-        if(isset($post_data->username)){
-        $username= mysqli_real_escape_string($this->conn,trim($post_data->username));
+        $user_id='';
+        if(isset($post_data->user_id)){
+        $user_id= mysqli_real_escape_string($this->conn,trim($post_data->user_id));
         }
-        $password='';
-        if(isset($post_data->password)){
-        $password= mysqli_real_escape_string($this->conn,trim($post_data->password));
+        $topic_id='';
+        if(isset($post_data->topic_id)){
+        $topic_id= mysqli_real_escape_string($this->conn,trim($post_data->topic_id));
         }
         
-        $fullname='';
-        if(isset($post_data->fullname)){
-        $fullname= mysqli_real_escape_string($this->conn,trim($post_data->fullname));
+        $start_at='';
+        if(isset($post_data->start_at)){
+        $start_at= mysqli_real_escape_string($this->conn,trim($post_data->start_at));
         }
 
-        $gender='';
-        if(isset($post_data->gender)){
-        $gender= mysqli_real_escape_string($this->conn,trim($post_data->gender));
+        $finish_at='';
+        if(isset($post_data->finish_at)){
+        $finish_at= mysqli_real_escape_string($this->conn,trim($post_data->finish_at));
         }
         
-        $email='';
-        if(isset($post_data->email)){
-        $email= mysqli_real_escape_string($this->conn,trim($post_data->email));
+        $score='';
+        if(isset($post_data->score)){
+        $score= mysqli_real_escape_string($this->conn,trim($post_data->score));
         }
         
-         $role='';
-        if(isset($post_data->role)){
-        $role= mysqli_real_escape_string($this->conn,trim($post_data->role));
+         $quizz_data='';
+        if(isset($post_data->quizz_data)){
+        $quizz_data= mysqli_real_escape_string($this->conn,trim($post_data->quizz_data));
         }
         
         
        
       
-        $sql="INSERT INTO user(username, password, fullname,gender,email,role ) VALUES ('$username', '$password', '$fullname', $gender, '$email', '$role')";
+        $sql="INSERT INTO user_quizzs(user_id, topic_id, start_at, finish_at, score, quizz_data ) VALUES ($user_id, $topic_id, '$start_at', '$finish_at', $score, '$quizz_data')";
          
          $result=  $this->conn->query($sql);
          
          if($result){
-           return 'Đăng ký thành công';     
+           return 'Thêm kết quả thành công';     
          }else{
             return 'Kiểm tra thông tin để nhập vào, lỗi';     
          }
@@ -115,60 +87,43 @@ class user
     return $user;  
     }
 
-    public function changePassword($post_data=array()){
+
+   public function updateUserQuizz($post_data=array()){
       if( isset($post_data->id)){
       $id=mysqli_real_escape_string($this->conn,trim($post_data->id));
           
-      $password='';
-      if(isset($post_data->password)){
-      $password= mysqli_real_escape_string($this->conn,trim($post_data->password));
-      }
-      
-      $sql="UPDATE user SET password='$password' WHERE id ='$id' ";
-    
-       $result=  $this->conn->query($sql);
-       
-        
-        unset($post_data->id); 
-       if($result){
-         return 'Thay đổi mật khẩu thành công';     
-       }else{
-        return 'Lõi thay đổi mật khẩu';     
-       }
-
-      }   
-   }
-
-   public function changeUserInfo($post_data=array()){
-      if( isset($post_data->id)){
-      $id=mysqli_real_escape_string($this->conn,trim($post_data->id));
-          
-      $username='';
-        if(isset($post_data->username)){
-        $username= mysqli_real_escape_string($this->conn,trim($post_data->username));
+      $user_id='';
+        if(isset($post_data->user_id)){
+        $user_id= mysqli_real_escape_string($this->conn,trim($post_data->user_id));
         }
         
-        $fullname='';
-        if(isset($post_data->fullname)){
-        $fullname= mysqli_real_escape_string($this->conn,trim($post_data->fullname));
+        $topic_id='';
+        if(isset($post_data->topic_id)){
+        $topic_id= mysqli_real_escape_string($this->conn,trim($post_data->topic_id));
         }
 
-        $gender='';
-        if(isset($post_data->gender)){
-        $gender= mysqli_real_escape_string($this->conn,trim($post_data->gender));
-        }
-        
-        $email='';
-        if(isset($post_data->email)){
-        $email= mysqli_real_escape_string($this->conn,trim($post_data->email));
-        }
-        
-         $role='';
-        if(isset($post_data->role)){
-        $role= mysqli_real_escape_string($this->conn,trim($post_data->role));
+        $start_at='';
+        if(isset($post_data->start_at)){
+        $start_at= mysqli_real_escape_string($this->conn,trim($post_data->start_at));
         }
 
-      $sql="UPDATE user SET username ='$username', fullname ='$fullname', gender =$gender, email ='$email', role ='$role' where id = $id";
+        $finish_at='';
+        if(isset($post_data->finish_at)){
+        $finish_at= mysqli_real_escape_string($this->conn,trim($post_data->finish_at));
+        }
+        
+        $score='';
+        if(isset($post_data->score)){
+        $score= mysqli_real_escape_string($this->conn,trim($post_data->score));
+        }
+        
+         $quizz_data='';
+        if(isset($post_data->quizz_data)){
+        $quizz_data= mysqli_real_escape_string($this->conn,trim($post_data->quizz_data));
+        }
+  
+
+      $sql="UPDATE user_quizzs SET user_id ='$user_id', topic_id ='$topic_id', start_at ='$start_at', finish_at ='$finish_at', score='$score', quizz_data='$quizz_data' where id = $id";
     
        $result=  $this->conn->query($sql);
        
@@ -182,38 +137,47 @@ class user
 
       }   
    }
-   
-   //  public function view_user_id($id){
-   //     if(isset($id)){
-   //     $id= mysqli_real_escape_string($this->conn,trim($id));
-   //     //echo $SV_id1;
-   //     $sql="Select * from user where id='$id'";
-        
-   //     $result=  $this->conn->query($sql);
-     
-   //      return $result->fetch_assoc(); 
-    
-   //     }  
-   //  }
-    
-   
-    
-    public function deleteUser($post_data=array()){
-        
-      if( isset($post_data->id)){
-         $id=mysqli_real_escape_string($this->conn,trim($post_data->id));
 
-       $sql="DELETE FROM  user  WHERE id =$id ";
-        $result=  $this->conn->query($sql);
-        
-        if($result){
-          return 'Xóa thành công';     
-        }else{
-         return 'Kiểm tra, lỗi xóa';     
-        }                   
-       }
-        
-    }
+   public function userQuizzByUserID($post_data=array()){
+
+    if( isset($post_data->user_id)){
+        $user_id=mysqli_real_escape_string($this->conn,trim($post_data->user_id));
+    $sql = "SELECT * FROM user_quizzs where user_id=$user_id";
+ 
+   $query=  $this->conn->query($sql);
+   $userquizzs=array();
+   if ($query->num_rows > 0) {
+   while ($row = $query->fetch_assoc()) {
+      $userquizzs['user_quizz_data'][]= $row;
+   }
+   }     
+}  
+       
+   
+return $userquizzs;  
+    
+}
+
+public function top10User($post_data=array()){
+
+    if( isset($post_data->topic_id)){
+        $topic_id=mysqli_real_escape_string($this->conn,trim($post_data->topic_id));
+    $sql = "SELECT username, score, (finish_at - start_at) as user_time FROM user_quizzs inner join user on user_quizzs.user_id = user.id where topic_id=$topic_id order by score desc, user_time asc limit 10" ;
+ 
+   $query=  $this->conn->query($sql);
+   $topUser=array();
+   if ($query->num_rows > 0) {
+   while ($row = $query->fetch_assoc()) {
+      $topUser['top_user_data'][]= $row;
+   }
+   }     
+}  
+       
+   
+return $topUser;  
+    
+}
+    
     function __destruct() {
     mysqli_close($this->conn);  
     }
