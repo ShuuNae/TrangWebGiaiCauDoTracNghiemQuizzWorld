@@ -16,7 +16,7 @@
   - Người dùng phải tạo tài khoản để có thể tham gia trả lời.
   ## Nguồn tham khảo
   - Model: BT_AP, giảng viên, ths NGUYỄN VĂN HOÀN
-  - Controller: 
+  - Controller: https://stackoverflow.com/questions/7564832/how-to-bypass-access-control-allow-origin
   - View: 
   ## Thông tin liên hệ
   - Hoàng Phước An (Nhóm trưởng)
