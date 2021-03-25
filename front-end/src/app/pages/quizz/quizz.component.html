@@ -1,0 +1,53 @@
+<div class="container-fluid px-xl-5" style="max-width: 1000px;">
+    <div class="py-5 paper-width">
+        <div class="card">
+            <div class="card-header">
+                <div class="row align-items-center">
+                    <div class="pl-3 d-inline-block">
+                        <img src="{{getGavatar()}}" class="img-fluid rounded-circle shadow top-avatar mr-2" width="30">
+                        <span class="text-primary">{{currentUser.fullname}}</span> <br>
+                        <span class="h6 text-uppercase my-auto">CHỦ ĐỀ: {{currentTopic?.name}}</span>
+                    </div>
+                    <div class="ml-auto d-inline-block">
+                        <button class="btn btn-lg btn-outline-info px-3 mr-2" data-toggle="tooltip" data-placement="top"
+                            title="" data-original-title="Your spent time"><span class="mr-1"
+                                id="time-counter-top"><span *ngIf="isCompleted">{{currentUserQuizz.score}}/100 -
+                                </span>{{transform(seconds)}}</span></button>
+
+                        <button *ngIf="!isCompleted" type="button" class="btn btn-lg btn-warning"
+                            (click)="complete()">Hoàn
+                            thành</button>
+                        <button *ngIf="isCompleted" type="button" class="btn btn-lg btn-primary"
+                            [routerLink]="['/']">Trang chủ</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div>
+                    <div class="pt-3" *ngFor="let quizz of quizzs; let i = index;">
+                        <div class="font-weight-bold">{{i+1}}. {{quizz.question}}</div>
+                        <div class="row mt-2">
+                            <div class="col-6 col-lg-3" (click)="changeAns(i,'A')">
+                                <span [ngClass]="extractCircle(i,'A')">A</span>.
+                                {{quizz.ansA}}
+                            </div>
+                            <div class="col-6 col-lg-3" (click)="changeAns(i,'B')">
+                                <span [ngClass]="extractCircle(i,'B')">B</span>.
+                                {{quizz.ansB}}
+                            </div>
+                            <div class="col-6 col-lg-3" (click)="changeAns(i,'C')">
+                                <span [ngClass]="extractCircle(i,'C')">C</span>.
+                                {{quizz.ansC}}
+                            </div>
+                            <div class="col-6 col-lg-3" (click)="changeAns(i,'D')">
+                                <span [ngClass]="extractCircle(i,'D')">D</span>.
+                                {{quizz.ansD}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

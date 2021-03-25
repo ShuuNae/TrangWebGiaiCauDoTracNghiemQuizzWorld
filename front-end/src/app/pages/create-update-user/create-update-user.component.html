@@ -1,0 +1,93 @@
+<div class="row my-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="h6 text-uppercase mb-0">{{title}}</h3>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-horizontal" method="post">
+                    <div *ngIf="error" class="alert alert-danger mb-3 mb-0">{{error}}</div>
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label">Tên đăng nhập</label>
+                        <div class="col-md-9">
+                            <input type="text" formControlName="username" class="form-control"
+                                placeholder="Tên đăng nhập" [attr.disabled]="curerentUser ? '' : null"
+                                [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                <div *ngIf="f.username.errors.required">Bạn chưa nhập tên đăng nhập</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label">Mật khẩu</label>
+                        <div class="col-md-9">
+                            <input type="{{curerentUser?'password':'text'}}" formControlName="password"
+                                class="form-control" placeholder="Mật khẩu"
+                                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                <div *ngIf="f.password.errors.required">Bạn chưa nhập mật khẩu</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label">Tên hiển thị</label>
+                        <div class="col-md-9">
+                            <input type="text" formControlName="fullname" class="form-control"
+                                placeholder="Tên hiển thị"
+                                [ngClass]="{ 'is-invalid': submitted && f.fullname.errors }" />
+                            <div *ngIf="submitted && f.fullname.errors" class="invalid-feedback">
+                                <div *ngIf="f.fullname.errors.required">Bạn chưa nhập tên cho người dùng</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label">Email</label>
+                        <div class="col-md-9">
+                            <input type="text" formControlName="email" class="form-control" placeholder="Email"
+                                [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                <div *ngIf="f.email.errors.required">Bạn chưa nhập email cho người dùng</div>
+                                <div *ngIf="f.email.errors.email">Địa chỉ Email nhập vào không hợp lệ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label">Giới tính</label>
+                        <div class="col-md-9">
+                            <select formControlName="gender" class="form-control" (change)="changeGender($event)">
+                                <option value="" disabled>Chọn giới tính</option>
+                                <option *ngFor="let gender of genders" value="{{gender[0]}}">{{gender[1]}}</option>
+                            </select>
+                            <div *ngIf="submitted && f.gender.errors" class="invalid-feedback">
+                                <div *ngIf="f.gender.errors.required">Bạn chưa chọn giới tính cho người dùng</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label">Vai trò - Quyền hạn</label>
+                        <div class="col-md-9">
+                            <select formControlName="role" class="form-control" (change)="changeRole($event)">
+                                <option value="" disabled>Chọn vai trò</option>
+                                <option *ngFor="let role of roles" value="{{role}}">{{role}}</option>
+                            </select>
+                            <div *ngIf="submitted && f.role.errors" class="invalid-feedback">
+                                <div *ngIf="f.role.errors.required">Bạn chưa chọn vai trò cho người dùng</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form-group">
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">{{curerentUser?'Sửa tài khoản':'Tạo tài khoản'}}</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

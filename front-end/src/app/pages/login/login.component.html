@@ -1,0 +1,62 @@
+<div class="app-body">
+  <main class="main d-flex align-items-center">
+    <div class="container" style="height: 100vh;">
+      <div class="row h-100 align-items-center">
+        <div class="col-md-8 mx-auto">
+          <div class="card-group">
+            <div class="card p-4">
+              <div class="card-body">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                  <h3>ĐĂNG NHẬP</h3>
+                  <p class="text-muted">Truy cập vào tài khoản của bạn</p>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+                    <input type="text" formControlName="username" class="form-control" placeholder="Tên đăng nhập"
+                      [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                      <div *ngIf="f.username.errors.required">Bạn chưa nhập tên đăng nhập</div>
+                    </div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-key"></i></span>
+                    </div>
+                    <input type="password" formControlName="password" class="form-control" placeholder="Mật khẩu"
+                      [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                      <div *ngIf="f.password.errors.required">Bạn chưa nhập mật khẩu</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <button [disabled]="loading" class="btn btn-primary px-4">
+                        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                        Đăng nhập
+                      </button>
+                      <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+                    </div>
+                    <div class="col-6 text-right">
+                      <!-- <button type="button" class="btn btn-link px-0">Forgot password?</button> -->
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%">
+              <div class="card-body text-center">
+                <div>
+                  <h2>Đăng ký</h2>
+                  <p>Hãy cùng tham gia vào thế giới giải đố của chúng tôi, nơi có hơn hàng chục triệu câu hỏi đố vui và
+                    hàng trăn nghìn thành viên thường trực.</p>
+                  <button type="button" class="btn btn-success active mt-3">Đăng ký ngay!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

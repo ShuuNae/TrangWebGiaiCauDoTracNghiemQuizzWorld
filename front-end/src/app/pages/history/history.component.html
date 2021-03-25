@@ -1,0 +1,103 @@
+<div class="row my-5">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <div class="row align-items-center">
+                    <h6>Danh Sách Chủ Đề</h6>
+                </div>
+            </div>
+            <div class="card-body p-2">
+                <div class="container-fluid">
+                    <ul class="list-group">
+                        <li class="list-group-item px-0">
+                            <a (click)="selectTopic()"
+                                class="bg-white shadow roundy px-2 py-3 h-100 d-flex align-items-center justify-content-between bg-hover-gradient-info "
+                                data-toggle="tooltip" data-placement="bottom" title=""
+                                data-original-title="Total tests you have performed">
+                                <div class="flex-grow-1 d-flex align-items-center">
+                                    <div class="icon text-white mx-2 bg-info"><i class="fas fa-server"></i></div>
+                                    <div class="text">
+                                        <h6 class="mb-0">Tất cả bài thi</h6><span class="text-gray"><small>{{countAll}}
+                                                bài thi</small></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item px-0" *ngFor="let topic of topics">
+                            <a (click)="selectTopic(topic)"
+                                class="bg-white shadow roundy px-2 py-3 h-100 d-flex align-items-center justify-content-between bg-hover-gradient-info "
+                                data-toggle="tooltip" data-placement="bottom" title=""
+                                data-original-title="Total tests you have performed">
+                                <div class="flex-grow-1 d-flex align-items-center">
+                                    <div class="icon text-white mx-2 bg-info"><i class="{{topic.icon}}"></i></div>
+                                    <div class="text">
+                                        <h6 class="mb-0">{{topic.name}}</h6><span
+                                            class="text-gray"><small>{{topic.count}}
+                                                bài thi</small></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="d-inline-block">
+                            <h6 class="text-uppercase">
+                                {{title}}
+                            </h6>
+                            <p class="text-gray mb-md-0">Tổng số bài kiểm tra của bạn đã thực hiện</p>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <!-- <form action="/test" class="form-inline float-md-right" method="get"> <input type="hidden"
+                                name="type" value="ALL">
+                            <div class="input-group">
+                                <input type="text" placeholder="Từ khóa" class="form-control" name="searchKey" value="">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+                                </div>
+                            </div>
+                        </form> -->
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="message card px-5 py-3 mb-4 bg-hover-gradient-primary no-anchor-style"
+                    *ngFor="let uq of currentUserQuizzs; let i = index;">
+                    <div class="row">
+                        <div
+                            class="col-lg-3 d-flex align-items-center flex-column flex-lg-row text-center text-md-left">
+                            <h6 class="mb-0" style="font-family: Tahoma">{{i+1}}. Mã bài thi {{uq.id}} lúc
+                                {{uq.start_at}}</h6>
+                        </div>
+                        <div
+                            class="col-lg-3 d-flex align-items-center flex-column flex-lg-row text-center text-md-left">
+                            <div
+                                class="roundy w-100 text-center py-1 mr-0 mt-2 mt-lg-0 text-white exclode float-lg-left text-sm bg-red">
+                                {{uq.name}} </div>
+                        </div>
+                        <div
+                            class="col-lg-6 d-flex align-items-center flex-column flex-lg-row text-center text-md-left">
+                            <button type="button" class="btn btn-outline-green float-lg-right ml-auto"
+                                data-toggle="modal" data-target="#instructor_comment_model">
+                                {{uq.score}}/100 </button>
+                        </div>
+                    </div>
+                </div>
+
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item active"><a class="page-link" href="/test?page=1&amp;type=ALL">1</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>

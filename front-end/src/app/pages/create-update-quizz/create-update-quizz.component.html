@@ -1,0 +1,111 @@
+<div class="row my-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="h6 text-uppercase mb-0">{{title}}</h3>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-horizontal" method="post">
+                    <div *ngIf="error" class="alert alert-danger mb-3 mb-0">{{error}}</div>
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label">Câu hỏi</label>
+                        <div class="col-md-9">
+                            <input type="text" formControlName="question" class="form-control" placeholder="Câu hỏi"
+                                [ngClass]="{ 'is-invalid': submitted && f.question.errors }" />
+                            <div *ngIf="submitted && f.question.errors" class="invalid-feedback">
+                                <div *ngIf="f.question.errors.required">Bạn chưa nhập câu hỏi</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="row">
+                        <div class="col-12 col-lg-3">
+                            <div class="form-group row">
+                                <label class="col-md-3 form-control-label">A</label>
+                                <div class="col-md-9">
+                                    <input type="text" formControlName="ansA" class="form-control"
+                                        [ngClass]="{ 'is-invalid': submitted && f.ansA.errors }" />
+                                    <div *ngIf="submitted && f.ansA.errors" class="invalid-feedback">
+                                        <div *ngIf="f.ansA.errors.required">Thiếu đáp án</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <div class="form-group row">
+                                <label class="col-md-3 form-control-label">B</label>
+                                <div class="col-md-9">
+                                    <input type="text" formControlName="ansB" class="form-control"
+                                        [ngClass]="{ 'is-invalid': submitted && f.ansB.errors }" />
+                                    <div *ngIf="submitted && f.ansB.errors" class="invalid-feedback">
+                                        <div *ngIf="f.ansB.errors.required">Thiếu đáp án</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <div class="form-group row">
+                                <label class="col-md-3 form-control-label">C</label>
+                                <div class="col-md-9">
+                                    <input type="text" formControlName="ansC" class="form-control"
+                                        [ngClass]="{ 'is-invalid': submitted && f.ansC.errors }" />
+                                    <div *ngIf="submitted && f.ansC.errors" class="invalid-feedback">
+                                        <div *ngIf="f.ansC.errors.required">Thiếu đáp án</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <div class="form-group row">
+                                <label class="col-md-3 form-control-label">D</label>
+                                <div class="col-md-9">
+                                    <input type="text" formControlName="ansD" class="form-control"
+                                        [ngClass]="{ 'is-invalid': submitted && f.ansD.errors }" />
+                                    <div *ngIf="submitted && f.ansD.errors" class="invalid-feedback">
+                                        <div *ngIf="f.ansD.errors.required">Thiếu đáp án</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label">Đáp án đúng là</label>
+                        <div class="col-md-9">
+                            <select formControlName="correct" class="form-control" (change)="changeCorrectAns($event)">
+                                <option value="" disabled>Chọn đáp án đúng</option>
+                                <option *ngFor="let correct of corrects" value="{{correct}}">{{correct}}</option>
+                            </select>
+                            <div *ngIf="submitted && f.correct.errors" class="invalid-feedback">
+                                <div *ngIf="f.correct.errors.required">Bạn chưa chọn đáp án đúng</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label">Chủ đề của câu hỏi</label>
+                        <div class="col-md-9">
+                            <select formControlName="topic_id" class="form-control" (change)="changeTopic($event)">
+                                <option value="" disabled>Chọn chủ đề</option>
+                                <option *ngFor="let topic of topics" value="{{topic.id}}">{{topic.name}}</option>
+                            </select>
+                            <div *ngIf="submitted && f.topic_id.errors" class="invalid-feedback">
+                                <div *ngIf="f.topic_id.errors.required">Bạn chưa chọn đáp án đúng</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="line"></div>
+                    <div class="form-group">
+                        <div class="text-center">
+                            <button *ngIf="currentQuizz" (click)="confirmDelete(currentQuizz)" type="button"
+                                class="btn btn-danger mr-3">Xóa câu hỏi</button>
+                            <button type="submit" class="btn btn-primary">{{title}}</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

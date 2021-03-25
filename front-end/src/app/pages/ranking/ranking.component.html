@@ -1,0 +1,77 @@
+<div class="row my-5">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <div class="row align-items-center">
+                    <h6>Xếp theo chủ đề</h6>
+                </div>
+            </div>
+            <div class="card-body p-2">
+                <div class="container-fluid">
+                    <ul class="list-group">
+                        <li class="list-group-item px-0">
+                            <a (click)="selectTopic()"
+                                class="bg-white shadow roundy px-2 py-3 h-100 d-flex align-items-center justify-content-between bg-hover-gradient-info "
+                                data-toggle="tooltip" data-placement="bottom" title=""
+                                data-original-title="Total tests you have performed">
+                                <div class="flex-grow-1 d-flex align-items-center">
+                                    <div class="icon text-white mx-2 bg-info"><i class="fas fa-server"></i></div>
+                                    <div class="text">
+                                        <h6 class="mb-0">Tổng quan top 10</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item px-0" *ngFor="let topic of topics">
+                            <a (click)="selectTopic(topic)"
+                                class="bg-white shadow roundy px-2 py-3 h-100 d-flex align-items-center justify-content-between bg-hover-gradient-info "
+                                data-toggle="tooltip" data-placement="bottom" title=""
+                                data-original-title="Total tests you have performed">
+                                <div class="flex-grow-1 d-flex align-items-center">
+                                    <div class="icon text-white mx-2 bg-info"><i class="{{topic.icon}}"></i></div>
+                                    <div class="text">
+                                        <h6 class="mb-0">{{topic.name}}</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="d-inline-block">
+                            <h6 class="text-uppercase">
+                                {{title}}
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="message card px-5 py-3 mb-4 bg-hover-gradient-primary no-anchor-style"
+                    *ngFor="let user of users">
+                    <div class="row">
+                        <div
+                            class="col-lg-4 d-flex align-items-center flex-column flex-lg-row text-center text-md-left">
+                            <img src="{{getGavatar(user.email)}}" alt="ql cau hoi" style="max-width: 3rem"
+                                class="rounded-circle mr-3 my-2 my-lg-0 top-avatar"
+                                onerror="this.onerror=null; this.src='assets/img/avatar-1.jpg'">
+                            <h6 class="mb-0" style="font-family: Tahoma">{{user.fullname}}</h6>
+                        </div>
+
+                        <div class="d-flex align-items-center flex-column flex-lg-row text-center text-md-left ml-auto">
+                            <button type="button"
+                                class="btn btn-outline-red float-lg-right ml-2">{{user.avg_score}}/100</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
